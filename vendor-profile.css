@@ -23,7 +23,7 @@ main {
 }
 
 main>img{
-  width: 20rem;
+  width: 25rem;
 }
 
 .form-container {
@@ -74,15 +74,12 @@ main>img{
 }
 
 .form__input>select {
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url("./images/lsicon_down-filled.svg");
   background-repeat: no-repeat;
   background-position: right 8px center;
-}
-
-.form__input>select:invalid{
-  color: #9B9B9B !important;
 }
 
 .form__input>textarea {
@@ -108,7 +105,8 @@ main>img{
   padding: 10px 20px;
   color: #FCFCFC;
   border-radius: 32px;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   width: 80%;
 }
 
@@ -118,7 +116,7 @@ main>img{
   }
 
   main>img{
-    width: 10rerm;
+    width: 20rem;
   }
 }
 

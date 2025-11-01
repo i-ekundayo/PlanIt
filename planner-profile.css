@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -9,8 +9,8 @@ body {
 }
 
 :root {
-  --primary-color-blue: #1B2CC1;
-  --border-color-blue: #767CF5;
+  --primary-color-blue: #1b2cc1;
+  --border-color-blue: #767cf5;
 }
 
 main {
@@ -22,7 +22,7 @@ main {
   padding: 0px 50px;
 }
 
-main>img{
+main > img {
   width: 20rem;
 }
 
@@ -49,7 +49,7 @@ main>img{
   padding: 4px 8px;
 }
 
-.form__heading>img{
+.form__heading > img {
   margin-right: 8px;
   width: 20px;
 }
@@ -60,20 +60,22 @@ main>img{
   margin-bottom: 10px;
 }
 
-.form__input>label{
+.form__input > label {
   font-size: 12px;
 }
 
-.form__input>input, .form__input>select {
+.form__input > input,
+.form__input > select {
   height: 28px;
   padding: 5px 10px;
-  border:1px solid var(--border-color-blue);
+  border: 1px solid var(--border-color-blue);
   border-radius: 24px;
   font-size: 10px;
   outline: none;
 }
 
-.form__input>select {
+.form__input > select {
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url("./images/lsicon_down-filled.svg");
@@ -81,11 +83,7 @@ main>img{
   background-position: right 8px center;
 }
 
-.form__input>select:invalid{
-  color: #9B9B9B !important;
-}
-
-.form__input>textarea {
+.form__input > textarea {
   padding: 8px 12px;
   height: 70px;
   border-radius: 14px;
@@ -102,55 +100,62 @@ main>img{
   justify-content: center;
 }
 
-.form__button>button {
+.form__button > button {
   background-color: var(--primary-color-blue);
   border: none;
   padding: 10px 20px;
-  color: #FCFCFC;
+  color: #fcfcfc;
   border-radius: 32px;
   margin-top: 50px;
+  margin-bottom: 20px;
   width: 80%;
+  cursor: pointer;
 }
 
-@media (max-width: 900px){
-  body{
+@media (max-width: 900px) {
+  body {
     font-size: 50%;
   }
 
-  main>img{
-    width: 10rerm;
+  main > img {
+    width: 15rem;
   }
 }
 
-@media(max-width: 800px) {
-  body{
+@media (max-width: 800px) {
+  body {
     font-size: 100%;
   }
-  main>img{
+  main > img {
     display: none;
+  }
+  .form-container {
+    padding-top: 20px;
   }
   .form-container__paragraph {
     color: #727272;
     font-size: 16px;
     margin-top: 10px;
   }
-  .form__heading{
+  .form__heading {
     font-size: 16px;
   }
-  .form__input{
+  .form__input {
     margin-bottom: 16px;
   }
-  .form__input--textarea{
+  .form__input--textarea {
     height: 100px;
   }
-  
-  .form__input>input, .form__input>select{
-    height: 36px;
+
+  .form__input > input,
+  .form__input > select {
+    height: 30px;
   }
   .form__input--textarea {
     margin-bottom: 0px;
   }
-  .form__button>button {
-    margin-top: 30px;
+  .form__button > button {
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
