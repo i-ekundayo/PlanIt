@@ -4,101 +4,267 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PlanIt - Event Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landing-page.css">
 </head>
 <body>
   <!-- Header section -->
   <header class="header">
-    <div class="header__logo">
+    <div class="logo header__logo">
       <img src="./images/Group.svg" alt="logo.png">
       <h1>PlanIt</h1>
     </div>
 
     <nav class="header__nav">
-      <ul>
-        <li>Home</li>
-        <li>Features</li>
-        <li>How it Works</li>
-        <li>For planners</li>
-        <li>About</li>
-        <li>Contact</li>
+      <ul class="header__links">
+        <li class="header__link">Home</li>
+        <li class="header__link">Features</li>
+        <li class="header__link">How it Works</li>
+        <li class="header__link">For planners</li>
+        <li class="header__link">About</li>
+        <li class="header__link">Contact</li>
       </ul>
     </nav>
 
-    <button class="header__button">Sign Up</button>
+    <div class="header__button">
+      <button class="header__button--signIn">Sign In</button>
+      <button class="header__button--signUp">Sign Up</button>
+    </div>
+    
   </header>
 
   <!-- Hero section -->
   <section class="hero">
     <div class="hero__text">
-      <h1>"Plan Smarter. Work Together. Get Events Right."</h1>
-      <p>PlanIt helps event planners, vendors, and clients collaborate in one organized space, discover trusted vendors, communicate seamlessly, and track progress in real time.</p>
-      <div class="hero__button">
-        <button>Join Waitlist</button>
+      <h1 class="hero__heading">"Plan Smarter. Work Together. <span>Get Events Right.</span>"</h1>
+      <p class="hero__paragraph">PlanIt helps event planners, vendors, and clients collaborate in one organized space, discover trusted vendors, communicate seamlessly, and track progress in real time.</p>
+      <div class="button hero__button">
+        <button class="button--waitlist">Join Waitlist</button>
         <div>
-          <button>Learn More</button>
-          <img src="" alt="right-arrow.png">
+          <button class="button--learn-more">Learn More</button>
+          <img src="./images/mingcute_arrow-up-line.svg" alt="right-arrow.png">
         </div>
       </div>
     </div>
 
-    <diiv class="hero__image">
-      <img src="" alt="hero-image.png">
-    </diiv>
+    <div class="hero__image">
+      <img src="./images/Free Transparent iPhone Air Mockup (Mockuuups Studio).png" alt="hero-image.png">
+    </div>
   </section>
 
-  <!-- Features Section -->
-   <section class="features">
-    <h1 class="features__heading">Some features that set Planit apart from others</h1>
-    <p class="features__paragraph">Planit brings event planners and vendors together with smart tools that simplify collaboration, and communication all in one platform.</p>
-    <div class="features__cards">
-      <div class="features__card">
-        <img src="" alt="calendar.png">
-        <h3>Task and event management</h3>
-        <p>Planit lets you create event schedules, assign tasks, track progress, and manage deliverables and ensuring every event runs smoothly from start to finish.</p>
+  <!-- Platform Special Features Section -->
+   <section class="patform">
+    <h1 class="platform__heading">Some features that set Planit apart from others</h1>
+    <p class="platform__paragraph">Planit brings event planners and vendors together with smart tools that simplify features, and communication all in one platform.</p>
+    <div class="platform__cards">
+      <div class="platform__card">
+        <img src="./images/Vector.svg" alt="calendar.png">
+        <h3 class="platform__card--heading">Task and event management</h3>
+        <p class="platform__card--body">Planit lets you create event schedules, assign tasks, track progress, and manage deliverables and ensuring every event runs smoothly from start to finish.</p>
       </div>
     </div>
-    <div class="features__cards">
-      <div class="features__card">
-        <img src="" alt="message.png">
-        <h3>Messaging and notifications</h3>
-        <p>Send instant messages, share updates, and receive real-time notifications so everyone stays informed throughout the event planning process.</p>
+    <div class="platform__cards">
+      <div class="platform__card">
+        <img src="./images/lucide_search.svg" alt="message.png">
+        <h3 class="platform__card--heading">Messaging and notifications</h3>
+        <p class="platform__card--body">Send instant messages, share updates, and receive real-time notifications so everyone stays informed throughout the event planning process.</p>
       </div>
     </div>
-    <div class="features__cards">
-      <div class="features__card">
-        <img src="" alt="search.png">
-        <h3>Searching and filtering</h3>
-        <p>Find the right fit fast. Use smart filters to match with vendors or planners who meet your event’s exact needs.</p>
+    <div class="platform__cards">
+      <div class="platform__card">
+        <img src="./images/mynaui_message-dots.svg" alt="search.png">
+        <h3 class="platform__card--heading">Searching and filtering</h3>
+        <p class="platform__card--body">Find the right fit fast. Use smart filters to match with vendors or planners who meet your event’s exact needs.</p>
       </div>
     </div>
    </section>
 
-   <!-- Collaboration Section -->
-    <section class="collaboration">
-      <div class="collaboration__container">
-        <img src="" alt="collaboration_image.png">
-        <div class="collaboration__texts">
-          <div class="collaboration__text">
-            <img src="" alt="bullet.png">
-            <h3 class="collaboration__heading">Vendor Discovery</h3>
-            <p class="collaboration__paragraph">Find verified, rated vendors across all event categories.</p>
+   <!-- Features Section -->
+    <section class="features">
+      <h3 class="features__heading">Features</h3>
+      <div class="features__container">
+        <img src="./images/Free Transparent iPhone Air Mockup (Mockuuups Studio) (1).png" alt="features_image.png">
+        <div class="features__texts">
+          <div class="features__text">
+            <img src="./images/material-symbols_storefront-outline-sharp.svg" alt="storefront.png">
+            <h3 class="features__heading">All-in-One Dashboard</h3>
+            <p class="features__paragraph">Manage events, vendors, bookings  and tasks effortlessly.
+          <div class="features__text">
+            <img src="./images/material-symbols_storefront-outline-sharp.svg" alt="storefront.png">
+            <h3 class="features__heading">Role-Based Experience</h3>
+            <p class="features__paragraph">Whether planner or vendor, see tools and dashboards tailored to your needs.</p>
           </div>
-          <div class="collaboration__text">
-            <img src="" alt="bullet.png">
-            <h3 class="collaboration__heading">Secure transfer</h3>
-            <p class="collaboration__paragraph">Centralize chats, files, and updates  no more scattered messages.</p>
+          <div class="features__text">
+            <img src="./images/material-symbols_storefront-outline-sharp.svg" alt="storefront.png">
+            <h3 class="features__heading">Vendor Discovery</h3>
+            <p class="features__paragraph">Find verified, rated vendors across all event categories.</p>
           </div>
-          <div class="collaboration__text">
-            <img src="" alt="bullet.png">
-            <h3 class="collaboration__heading">Task Tracking</h3>
-            <p class="collaboration__paragraph">Assign and monitor tasks with real-time progress.</p>
-          </div>
-          <div class="collaboration__text">
-            <img src="" alt="bullet.png">Budget that works</h3>
-            <p class="collaboration__paragraph">Keep working even without internet, auto-sync when back online.</p>
+          <div class="features__text">
+            <img src="./images/material-symbols_storefront-outline-sharp.svg" alt="storefront.png">
+            <h3>Review & Rating System</h3>
+            <p class="features__paragraph">Build credibility with transparent reviews and ratings for your event.</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- How it works Section -->
+     <section class="framework">
+      <div class="framework__text">
+        <h1 class="framework__heading">How it works?</h1>
+        <div class="framwork__lists">
+          <div class="framework__list">
+            <div class="framework__list--bullet">1</div>
+            <div class="framework__list--heading">
+              <h4>Sign up as a planner or vendor.</h4>
+              <p class="framework__list-paragraph">Get started in minutes. Create a profile that showcases your skills, services, or event needs and join a growing network of event professionals.</p>
+            </div>
+          </div>
+          <div class="framework__gap"></div>
+          <div class="framework__list">
+            <div class="framework__list--bullet">2</div>
+            <div class="framework__list--heading">
+              <h4>Search and Collaborate</h4>
+              <p class="framework__list-paragraph">Use Planit’s smart search and filtering tools to discover trusted vendors and planners. Chat instantly, share ideas, and bring your event vision to life together.</p>
+            </div>
+          </div>
+          <div class="framework__gap"></div>
+          <div class="framework__list">
+            <div class="framework__list--bullet">3</div>
+            <div class="framework__list--heading">
+              <h4>Manage and deliver</h4>
+              <p class="framework__list-paragraph">Keep everything organized , assign tasks, set deadlines, and track progress. Planit keeps your team aligned so every event runs seamlessly. Plan your event from start to finish.</p>
+            </div>
+          </div>
+          <div class="button framework__button">
+            <button class="button--waitlist">Join Waitlist</button>
+            <div>
+              <button class="button--learn-more">Learn More</button>
+              <img src="./images/mingcute_arrow-up-line.svg" alt="right-arrow.png">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="framework__img">
+        <img src="./images/iPhone 15 Pro.png" alt="iphone.png">
+      </div>
+    </section>
+
+    <!-- Review Section -->
+    <section class="review">
+      <div class="review__text">
+        <h1 class="review__heading">What our satisfied clients say about PlanIt</h1>
+        <p class="review__paragraph">Every successful event begins with the right connection. our users share how PlanIt turned planning into a seamless experience.</p>
+      </div>
+
+      <div class="review__cards">
+        <div class="review__card">
+          <div class="reviewer__comment">
+            <div class="review__card--heading">
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+            </div>
+            <p class="review__card--body">“PlanIt helped us coordinate 10+ vendors for our corporate retreat with zero stress.”</p>
+          </div>
+          <div class="reviewer__profile">
+            <img src="./images/image 4.png" alt="profile.png">
+            <div class="reviewer__details">
+              <h4 class="reviewer__name">Tomi</h4>
+              <p class="reviewer__job">Event Planner</p>
+            </div>
+          </div>
+        </div>
+        <div class="review__card">
+          <div class="reviewer__comment">
+            <div class="review__card--heading">
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+            </div>
+            <p class="review__card--body">“Finally, a platform built for Nigerian event professionals!”</p>
+          </div>
+          <div class="reviewer__profile">
+            <img src="./images/image 4.png" alt="profile.png">
+            <div class="reviewer__details">
+              <h4 class="reviewer__name">Chike</h4>
+              <p class="reviewer__job">Decorator</p>
+            </div>
+          </div>
+        </div>
+        <div class="review__card">
+          <div class="reviewer__comment">
+            <div class="review__card--heading">
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+              <span><img src="./images/Path Copy 4.svg" alt="star.png"></span>
+            </div>
+            <p class="review__card--body">“PlanIt saved me hours of vendor coordination every week.”</p>
+          </div>
+          <div class="reviewer__profile">
+            <img src="./images/image 4.png" alt="profile.png">
+            <div class="reviewer__details">
+              <h4 class="reviewer__name">Amaka</h4>
+              <p class="reviewer__job">Event Planner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__description">
+        <div class="footer__text">
+          <footer class="logo footer__logo">
+            <img src="./images/Group.svg" alt="logo.png">
+            <h2>PlanIt</h2>
+          </footer>
+          <p class="footer__paragraph">Connecting event planners and vendors to create unforgettable experiences.</p>
+        </div>
+        <nav class="footer__nav">
+          <div class="footer__nav--quick-links">
+            <h3>Quick Links</h3>
+            <ul class="footer__links">
+              <li class="footer__link">Home</li>
+              <li class="footer__link">About</li>
+              <li class="footer__link">Features</li>
+              <li class="footer__link">How it Works</li>
+              <li class="footer__link">Reviews</li>
+            </ul>
+          </div>
+          <div class="footer__nav--help-center">
+            <h3>Help Center</h3>
+            <ul class="footer__links">
+              <li class="footer__link">Terms</li>
+              <li class="footer__link">Conditions</li>
+              <li class="footer__link">Privacy</li>
+              <li class="footer__link">Policy</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__copyrights">
+        <div class="footer__copyright">
+          <p>© Copyright 2025, All Rights Reserved by PlanIt.</p>
+        </div>
+        <div class="footer__social-media">
+          <img src="./images/Twitter icon.svg" alt="twitter.png">
+          <img src="./images/Facebook icon.svg" alt="facebook.png">
+          <img src="./images/Instagram icon.svg" alt="instagram.png">
+        </div>
+      </div>
+
+    </footer>
 </body>
 </html>
