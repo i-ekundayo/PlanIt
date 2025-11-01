@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlanIt - Event Management</title>
+    <link rel="stylesheet" href="planner-profile.css" />
+  </head>
+  <body>
+    <main>
+      <img src="./images/login 1 1.png" alt="image.png" />
+      <div class="form-container">
+        <h1 class="form-container__heading">Set Up Your Profile</h1>
+        <h2 class="form-container__paragraph">
+          This helps match you with the right vendors
+        </h2>
+        <form action="">
+          <h2 class="form__heading">
+            <img
+              src="./images/uiw_verification.svg"
+              alt="verification.png"
+            /><span>Business Information</span>
+          </h2>
+          <div class="form__input">
+            <label for="username"><p>Username</p></label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+
+          <div class="form__input">
+            <label for="location"><p>Location (City, Country)</p></label>
+            <input
+              type="text"
+              id="location"
+              placeholder="e.g. Lagos, Nigeria"
+              required
+            />
+          </div>
+
+          <div class="form__input form__input--textarea">
+            <label for="description"><p>Short Description / Bio</p></label>
+            <textarea
+              id="description"
+              placeholder="Tell planners about your services..."
+            ></textarea>
+          </div>
+
+          <h2 class="form__heading">
+            <img
+              src="./images/fluent-mdl2_join-online-meeting.svg"
+              alt="online.png"
+            /><span>Online Presence</span>
+          </h2>
+
+          <div class="form__input">
+            <label for="social-media"><p>Social Media</p></label>
+            <select id="social-media" required>
+              <option value="" disabled selected>Select a platform</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="tiktok">Tiktok</option>
+              <option value="twitter">Twitter (X)</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <div class="form__input">
+            <label for="profile"><p>Profile Link</p></label>
+            <input
+              type="text"
+              id="profile"
+              placeholder="e.g. https://instagram.com/planit?ighnfgdfghjk"
+              required
+            />
+          </div>
+
+          <div class="form__input">
+            <label for="portfolio"><p>Website/Portfolio (Optional)</p></label>
+            <input
+              type="text"
+              id="portfolio"
+              placeholder="e.g. www.yournamecreations.com"
+              required
+            />
+          </div>
+
+          <div class="form__button">
+            <button type="submit">Save & Continue</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
