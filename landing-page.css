@@ -1,9 +1,153 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color-blue-500: #1b2cc1;
+  --primary-color-blue-100: #d3d4fc;
+  --neutral-color-950: #181818;
+  --neutral-color-900: #282828;
+  --neutral-color-800: #4b4b4b;
+  --neutral-color-700: #727272;
+  --neutral-color-100: #fcfcfc;
+  --neutral-color-50: #ffffff;
+}
+
 body {
   font-family: "Inter", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--neutral-color-950);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.button button {
+  border: none;
+  cursor: pointer;
+}
+
+.button--waitlist {
+  padding: 16px 24px;
+  border-radius: 8px;
+  background: var(--primary-color-blue-500);
+  color: var(--neutral-color-100);
+}
+
+.button--learn-more {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: inherit;
+  color: var(--neutral-color-950);
+}
+
+.header {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.logo > h1 {
+  color: var(--primary-color-blue-500);
+  text-align: center;
+  font-family: "Playfair Display";
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__button > button {
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.header__button--signIn {
+  color: var(--neutral-color-800);
+  background-color: var(--neutral-color-100);
+  border-radius: 10px;
+  background-color: inherit;
+}
+
+.header__button--signUp {
+  border-radius: 8px;
+  background: var(--primary-color-blue-500);
+  color: var(--neutral-color-100);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    var(--neutral-color-50) 69.84%,
+    var(--primary-color-blue-100) 96.47%
+  );
+  position: relative;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 40%;
+  flex-shrink: 0;
+  padding: 100px 0px;
+}
+
+.hero__heading {
+  color: var(--neutral-color-900);
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+.hero__heading > span {
+  color: var(--primary-color-blue-500);
+}
+
+.hero__paragraph {
+  color: var(--neutral-color-700);
+  text-align: center;
+}
+
+.hero__image {
+  position: absolute;
+  right: 100px;
 }
