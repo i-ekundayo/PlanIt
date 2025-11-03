@@ -684,6 +684,7 @@ a {
   .footer__text {
     width: 80%;
     align-items: center;
+    text-align: center;
   }
   .footer__nav {
     flex-direction: column;
