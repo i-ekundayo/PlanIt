@@ -1,0 +1,155 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --primary-color-blue: #1B2CC1;
+  --border-color-blue: #767CF5;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+}
+
+main>img{
+  width: 25rem;
+}
+
+.form-container {
+  max-width: 600px;
+  padding: 30px;
+  height: 100vh;
+  flex-grow: 1;
+}
+
+.form-container__heading {
+  color: var(--primary-color-blue);
+}
+
+.form-container__paragraph {
+  margin-bottom: 20px;
+}
+
+.form__heading {
+  color: var(--primary-color-blue);
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 4px 8px;
+}
+
+.form__heading>img{
+  margin-right: 8px;
+  width: 20px;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form__input>label{
+  font-size: 12px;
+}
+
+.form__input>input, .form__input>select {
+  height: 28px;
+  padding: 5px 10px;
+  border:1px solid var(--border-color-blue);
+  border-radius: 24px;
+  font-size: 10px;
+  outline: none;
+}
+
+.form__input>select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("./images/lsicon_down-filled.svg");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.form__input>textarea {
+  padding: 8px 12px;
+  height: 70px;
+  border-radius: 14px;
+  border: 1px solid var(--border-color-blue);
+  outline: none;
+}
+
+.form__input--textarea {
+  margin-bottom: 16px;
+}
+
+.form__button {
+  display: flex;
+  justify-content: center;
+}
+
+.form__button>button {
+  background-color: var(--primary-color-blue);
+  border: none;
+  padding: 10px 20px;
+  color: #FCFCFC;
+  border-radius: 32px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+@media (max-width: 900px){
+  body{
+    font-size: 50%;
+  }
+
+  main>img{
+    width: 20rem;
+  }
+}
+
+@media(max-width: 800px) {
+  body{
+    font-size: 100%;
+  }
+  main>img{
+    display: none;
+  }
+  .form-container__paragraph {
+    color: #727272;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .form__heading{
+    font-size: 16px;
+  }
+  .form__input{
+    margin-bottom: 16px;
+  }
+  .form__input--textarea{
+    height: 100px;
+  }
+  
+  .form__input>input, .form__input>select{
+    height: 36px;
+  }
+  .form__input--textarea {
+    margin-bottom: 0px;
+  }
+  .form__button>button {
+    margin-top: 30px;
+  }
+}
