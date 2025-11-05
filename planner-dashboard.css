@@ -32,12 +32,26 @@ body {
   gap: 50px;
 }
 
+.active {
+  display: none;
+}
+
 li {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+}
+
+.container.collapsed .sidebar {
+  width: 0;
+  opacity: 0;
+}
+
+/* Allow main to take full width */
+.container.collapsed .main {
+  flex: 1 1 100%;
 }
 
 /* Sidebar */
@@ -49,6 +63,7 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   background: var(--Neutral-color-Neutral-50);
+  transition: width 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .sidebar__menus {
@@ -144,13 +159,14 @@ a {
 }
 
 /* Main */
-main {
+.main {
   display: flex;
   padding: 10px;
   flex-direction: column;
   align-items: stretch;
   gap: 36px;
   flex-grow: 1;
+  transition: transform 1s ease-in-out;
 }
 
 /* Header */
@@ -170,6 +186,7 @@ main {
 
 .header__search > img {
   cursor: pointer;
+  z-index: 2;
 }
 
 .header__searchbar {
@@ -191,6 +208,7 @@ main {
 
 .header__notification {
   position: relative;
+  cursor: pointer;
 }
 
 .notification--number {
