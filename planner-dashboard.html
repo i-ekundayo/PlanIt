@@ -8,9 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="planner-dashboard.css"/>
+    <link rel="stylesheet" href="planner-dashboard.css" />
   </head>
   <body>
+    <!-- Sidebar -->
     <aside class="sidebar">
       <div class="sidebar__menus">
         <div class="sidebar__logo">
@@ -19,35 +20,50 @@
         </div>
         <nav class="sidebar__nav">
           <ul class="sidebar__links">
-            <li class="sidebar__link">
-              <img src="./images/planner-images/Home.svg" alt="home.png" />
-              <p>Dashboard</p>
+            <li class="sidebar__link active">
+              <a href="">
+                <img src="./images/planner-images/Home.svg" alt="home.png" />
+                <p>Dashboard</p>
+              </a>
             </li>
             <li class="sidebar__link">
-              <img src="./images/planner-images/Vendors.svg" alt="vendor.png" />
-              <p>Vendors</p>
+              <a href="">
+                <img
+                  src="./images/planner-images/Vendors.svg"
+                  alt="vendor.png"
+                />
+                <p>Vendors</p>
+              </a>
             </li>
             <li class="sidebar__link">
-              <img src="./images/planner-images/Events.svg" alt="event.png" />
-              <p>Events</p>
+              <a href="">
+                <img src="./images/planner-images/Events.svg" alt="event.png" />
+                <p>Events</p>
+              </a>
             </li>
             <li class="sidebar__link">
-              <img src="./images/planner-images/Tasks.svg" alt="task.png" />
-              <p>Tasks</p>
+              <a href="">
+                <img src="./images/planner-images/Tasks.svg" alt="task.png" />
+                <p>Tasks</p>
+              </a>
             </li>
             <li class="sidebar__link">
-              <img
-                src="./images/planner-images/Messages.svg"
-                alt="message.png"
-              />
-              <p>Messages</p>
+              <a href="">
+                <img
+                  src="./images/planner-images/Messages.svg"
+                  alt="message.png"
+                />
+                <p>Messages</p>
+              </a>
             </li>
             <li class="sidebar__link">
-              <img
-                src="./images/planner-images/Settings.svg"
-                alt="setting.png"
-              />
-              <p>Settings</p>
+              <a href="">
+                <img
+                  src="./images/planner-images/Settings.svg"
+                  alt="setting.png"
+                />
+                <p>Settings</p>
+              </a>
             </li>
           </ul>
         </nav>
@@ -60,12 +76,20 @@
         </div>
       </div>
     </aside>
+
+    <!-- Main -->
     <main>
-      <!-- Navbar -->
+      <!-- Header -->
       <header class="header">
         <div class="header__search">
           <img src="./images/planner-images/Hamburger.svg" alt="menu.png" />
-          <input type="search" placeholder="Search events, tasks, vendors" />
+          <div class="header__searchbar">
+            <img
+              src="./images/planner-images/search Icon.svg"
+              alt="search.png"
+            />
+            <input type="search" placeholder="Search events, tasks, vendors" />
+          </div>
         </div>
         <div class="header__notification">
           <img
@@ -141,22 +165,17 @@
       <section class="event">
         <div class="event__heading">
           <h2 class="event__header heading">Upcoming Events</h2>
-          <div class="view__all">
+          <a href="" class="view__all">
             <p>View all</p>
             <img
               src="./images//planner-images/grommet-icons_next.svg"
               alt="viewall.png"
             />
-          </div>
+          </a>
         </div>
         <div class="event__cards">
           <div class="event__card">
-            <div class="event__card--heading">
-              <img
-                src="./images/planner-images/ImageWithFallback.png"
-                alt="image.png"
-              />
-            </div>
+            <div class="event__card--heading"></div>
             <div class="event__card--body">
               <h3 class="card__title">Baby Shower - William's</h3>
               <div class="card__date">
@@ -185,14 +204,20 @@
               </div>
               <div class="card__summary">
                 <div class="card__vendors">
-                  <img src="./images/planner-images/vendorss.svg" alt="" />
+                  <img
+                    src="./images/planner-images/vendorss.svg"
+                    alt="vendor.png"
+                  />
                   <div class="card__vendors--text">
                     <p>Vendors</p>
                     <p>6</p>
                   </div>
                 </div>
                 <div class="card__vendors">
-                  <img src="./images/planner-images/taskss.svg" alt="" />
+                  <img
+                    src="./images/planner-images/taskss.svg"
+                    alt="task.png"
+                  />
                   <div class="card__vendors--text">
                     <p>Tasks</p>
                     <p>33/35</p>
@@ -202,12 +227,7 @@
             </div>
           </div>
           <div class="event__card">
-            <div class="event__card--heading">
-              <img
-                src="./images/planner-images/ImageWithFallback (1).png"
-                alt="image.png"
-              />
-            </div>
+            <div class="event__card--heading"></div>
             <div class="event__card--body">
               <h3 class="card__title">Traditional Engagement - Ada & Chike</h3>
               <div class="card__date">
@@ -236,14 +256,20 @@
               </div>
               <div class="card__summary">
                 <div class="card__vendors">
-                  <img src="./images/planner-images/vendorss.svg" alt="" />
+                  <img
+                    src="./images/planner-images/vendorss.svg"
+                    alt="vendor.png"
+                  />
                   <div class="card__vendors--text">
                     <p>Vendors</p>
                     <p>8</p>
                   </div>
                 </div>
                 <div class="card__vendors">
-                  <img src="./images/planner-images/taskss.svg" alt="" />
+                  <img
+                    src="./images/planner-images/taskss.svg"
+                    alt="task.png"
+                  />
                   <div class="card__vendors--text">
                     <p>Tasks</p>
                     <p>31/35</p>
@@ -253,12 +279,7 @@
             </div>
           </div>
           <div class="event__card">
-            <div class="event__card--heading">
-              <img
-                src="./images/planner-images/ImageWithFallback (2).png"
-                alt="image.png"
-              />
-            </div>
+            <div class="event__card--heading"></div>
             <div class="event__card--body">
               <h3 class="card__title">
                 30th Birthday Party - Dara's Luxe Night
@@ -289,14 +310,20 @@
               </div>
               <div class="card__summary">
                 <div class="card__vendors">
-                  <img src="./images/planner-images/vendorss.svg" alt="" />
+                  <img
+                    src="./images/planner-images/vendorss.svg"
+                    alt="vendor.png"
+                  />
                   <div class="card__vendors--text">
                     <p>Vendors</p>
                     <p>6</p>
                   </div>
                 </div>
                 <div class="card__vendors">
-                  <img src="./images/planner-images/taskss.svg" alt="" />
+                  <img
+                    src="./images/planner-images/taskss.svg"
+                    alt="task.png"
+                  />
                   <div class="card__vendors--text">
                     <p>Tasks</p>
                     <p>14/25</p>
@@ -306,12 +333,7 @@
             </div>
           </div>
           <div class="event__card">
-            <div class="event__card--heading">
-              <img
-                src="./images/planner-images/ImageWithFallback (3).png"
-                alt="image.png"
-              />
-            </div>
+            <div class="event__card--heading"></div>
             <div class="event__card--body">
               <h3 class="card__title">Corporate Party - GTBank Lagos Team</h3>
               <div class="card__date">
@@ -340,14 +362,20 @@
               </div>
               <div class="card__summary">
                 <div class="card__vendors">
-                  <img src="./images/planner-images/vendorss.svg" alt="" />
+                  <img
+                    src="./images/planner-images/vendorss.svg"
+                    alt="vendor.png"
+                  />
                   <div class="card__vendors--text">
                     <p>Vendors</p>
                     <p>6</p>
                   </div>
                 </div>
                 <div class="card__vendors">
-                  <img src="./images/planner-images/taskss.svg" alt="" />
+                  <img
+                    src="./images/planner-images/taskss.svg"
+                    alt="task.png"
+                  />
                   <div class="card__vendors--text">
                     <p>Tasks</p>
                     <p>18/35</p>
@@ -360,74 +388,74 @@
       </section>
 
       <!-- Tasks Section -->
-      <section class="tasks">
+      <section class="task">
         <div class="event__heading">
           <h2 class="event__header heading">Tasks</h2>
-          <div class="view__all">
+          <a class="view__all">
             <p>View all</p>
             <img
               src="./images//planner-images/grommet-icons_next.svg"
               alt="viewall.png"
             />
-          </div>
+          </a>
         </div>
-        <div class="event__cards">
-          <div class="event__card">
+        <div class="task__cards">
+          <div class="task__card">
             <input type="checkbox" />
-            <div class="event__task">
-              <h3 class="event__task--title">
+            <div class="task__text">
+              <h3 class="task__text--title">
                 Finalize dessert and snack menu
               </h3>
-              <p class="event__task--event">Baby Shower-William's</p>
-              <p class="event__task--vendor">Assigned to Mide's Kitchen</p>
-              <div class="event__task--date">
+              <p class="task__text--event">Baby Shower-William's</p>
+              <p class="task__text--vendor">Assigned to Mide's Kitchen</p>
+              <div class="task__text--date">
                 <img src="./images/planner-images/Events.svg" alt="" />
                 <p>Nov 7, 2025</p>
               </div>
             </div>
-            <div class="event__badge">
-              <div class="event__badge--cont."></div>
-              <p class="event__badge--text">Completed</p>
+            <div class="task__badge task__badge--completed">
+              <div class="task__badge--cont"></div>
+              <p class="task__badge--text">Completed</p>
             </div>
           </div>
-          <div class="event__card">
+          <div class="task__card">
             <input type="checkbox" />
-            <div class="event__task">
-              <h3 class="event__task--title">Arrange delivery logistics</h3>
-              <p class="event__task--event">
+            <div class="task__text">
+              <h3 class="task__text--title">Arrange delivery logistics</h3>
+              <p class="task__text--event">
                 30th Birthday Party - Dara's Luxe Night
               </p>
-              <p class="event__task--vendor">Assigned to DJ Sly</p>
-              <div class="event__task--date">
+              <p class="task__text--vendor">Assigned to DJ Sly</p>
+              <div class="task__text--date">
                 <img src="./images/planner-images/Events.svg" alt="" />
                 <p>Nov 15, 2025</p>
               </div>
             </div>
-            <div class="event__badge">
-              <div class="event__badge--cont."></div>
-              <p class="event__badge--text">In Progress</p>
+            <div class="task__badge task__badge--in-progress">
+              <div class="task__badge--cont"></div>
+              <p class="task__badge--text">In Progress</p>
             </div>
           </div>
-          <div class="event__card">
+          <div class="task__card">
             <input type="checkbox" />
-            <div class="event__task">
-              <h3 class="event__task--title">
+            <div class="task__text">
+              <h3 class="task__text--title">
                 Approve stage and lighting design
               </h3>
-              <p class="event__task--event">
+              <p class="task__text--event">
                 Corporate Party - GTBank Lagos Team
               </p>
-              <p class="event__task--vendor">
+              <p class="task__text--vendor">
                 Assigned to SoundWave Entertainment
               </p>
-              <div class="event__task--date">
+              <div class="task__text--date">
                 <img src="./images/planner-images/Events.svg" alt="" />
                 <p>Nov 22, 2025</p>
               </div>
             </div>
-            <div class="event__badge">
-              <div class="event__badge--cont."></div>
-              <p class="event__badge--text">To Do</p>
+            <div class="task__badge task__badge--to-do">
+              <div class="task__badge--cont"></div>
+              <p class="task__badge--text">To Do</p>
             </div>
           </div>
         </div>
@@ -435,6 +463,7 @@
 
       <!-- Recent Activity Section -->
       <section class="activity">
+        <h2 class="heading">Recent Activity</h2>
         <ul class="activity__lists">
           <li class="activity__list">
             <div class="activity__list--badge">
