@@ -377,6 +377,13 @@ a {
   gap: 16px;
 }
 
+.features__text--left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
 /* How it works section */
 .framework {
   display: flex;
@@ -675,6 +682,9 @@ a {
   .toggler,
   .hamburger {
     display: flex;
+  }
+  .features__text--right, .features__text--left {
+    gap:  8px;
   }
   .footer__description{
     flex-direction: column;
