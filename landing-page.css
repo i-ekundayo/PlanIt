@@ -113,7 +113,7 @@ a {
   align-items: center;
 }
 
-.header__button > button {
+.header__button > a {
   padding: 12px 24px;
   border: none;
   cursor: pointer;
