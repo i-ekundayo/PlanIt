@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Email</title>
+    <link rel="stylesheet" href="forgot-password.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="illustration">
+        <!-- Replace with your illustration image -->
+        <img src="./images/verifypass.png" alt="verify account illustration" />
+      </div>
+
+      <section class="container__text">
+        <h1>Forgot Password</h1>
+        <p>Kindly enter your email address below to recover your account</p>
+      </section>
+
+      <div class="form-box" id="form-box">
+        <h2>Verify Code</h2>
+        <p class="link">
+          Please enter the code sent to your email address plaint@email.com
+        </p>
+
+        <div class="code-container">
+          <input class="code-input" type="text" maxlength="1" required />
+          <input class="code-input" type="text" maxlength="1" required />
+          <input class="code-input" type="text" maxlength="1" required />
+          <input class="code-input" type="text" maxlength="1" required />
+        </div>
+
+        <button class="max" onclick="verifyCode()">Verify Code</button>
+
+        <p class="link">Reset Password ? <a href="index.html">Reset</a></p>
+      </div>
+    </div>
+
+    <script>
+      const inputs = document.querySelectorAll(".code-input");
+
+      inputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+          if (input.value.length === 1 && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        });
+
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Backspace" && index > 0 && input.value === "") {
+            inputs[index - 1].focus();
+          }
+        });
+      });
+
+      function verifyCode() {
+        let code = "";
+        inputs.forEach((input) => (code += input.value));
+
+        if (code.length !== 4) {
+          alert("Enter 4-digit code");
+          return;
+        }
+
+        alert("Verifying code: " + code);
+      }
+    </script>
+  </body>
+</html>
