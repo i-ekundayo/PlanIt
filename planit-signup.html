@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Phosphor Icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+    
+    <title>PlanIt Sign-up</title>
+    
+    <link rel="stylesheet" href="planit.css">
+
+    <!-- Javascript link -->
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER: Back button (shows on mobile only) -->
+    <header class="header">
+        <span class="card-icon-wrapper">
+            <i class="ph ph-arrow-circle-left"></i>
+        </span>     
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="universal">
+        
+        <!-- LEFT SIDE: Image Section (Desktop only) -->
+        <div class="first-side">
+            <img src="image 8.png" alt="A person registering for an account">
+        </div>
+
+        <!-- RIGHT SIDE: Form Section -->
+        <div class="main-contents">
+            <div class="sub-main-content">
+                
+                <!-- PAGE HEADING -->
+                <div class="heading">
+                    <h1>Create Account</h1>
+                    <p>Let's get started. Join PlanIt to collaborate, manage and deliver smoothly</p>
+                </div>
+            
+                <!-- REGISTRATION FORM -->
+                <form class="Keyboard">
+                    
+                    <!-- ALL INPUT FIELDS -->
+                    <div class="inputs">
+                        
+                        <!-- Full Name Input -->
+                        <div class="input-group">
+                            <label class="Keyboard-item" for="fnm">Full Name</label> 
+                            <input 
+                                class="Keyboard-item-input" 
+                                type="text" 
+                                name="fname" 
+                                id="fnm" 
+                                placeholder="Enter your full name"
+                            >
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="input-group">
+                            <label class="Keyboard-item" for="em">Email Address</label>
+                            <input 
+                                class="Keyboard-item-input" 
+                                type="email" 
+                                name="email" 
+                                id="em" 
+                                placeholder="Enter your email"
+                            >
+                        </div>
+
+                        <!-- Password Input with Show/Hide Toggle -->
+                        <div class="input-group">
+                            <label class="Keyboard-item" for="ps">Password</label>
+                            <div class="input-wrapper">
+                                <input 
+                                    class="Keyboard-item-input" 
+                                    type="password" 
+                                    name="password" 
+                                    id="ps" 
+                                    placeholder="Enter a password"
+                                >
+                                <button 
+                                    type="button" 
+                                    class="password-toggle" 
+                                    onclick="togglePassword('ps')"
+                                    aria-label="Toggle password visibility"
+                                >
+                                    <i class="ph ph-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password Input with Show/Hide Toggle -->
+                        <div class="input-group">
+                            <label class="Keyboard-item" for="cps">Confirm Password</label>
+                            <div class="input-wrapper">
+                                <input 
+                                    class="Keyboard-item-input" 
+                                    type="password" 
+                                    name="Cpassword" 
+                                    id="cps" 
+                                    placeholder="Confirm your password"
+                                >
+                                <button 
+                                    type="button" 
+                                    class="password-toggle" 
+                                    onclick="togglePassword('cps')"
+                                    aria-label="Toggle password visibility"
+                                >
+                                    <i class="ph ph-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- TERMS & CONDITIONS CHECKBOX -->
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="agree">
+                        <label class="Keyboard-item" for="agree">
+                            I agree to the <a href="#">Terms and Condition</a>
+                        </label>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" class="submit-btn">Sign Up</button>
+
+                    <!-- ALTERNATIVE SIGN-IN OPTIONS -->
+                    <div class="other-means">
+                        
+                        <!-- "Or" Divider -->
+                        <div class="one-line">
+                            <div class="line"></div>
+                            <span class="or-text">Or</span>
+                            <div class="line"></div>
+                        </div>
+
+                        <!-- Google & Apple Sign-in Buttons -->
+                        <div class="other-options">
+                            <button type="button" class="social-btn">
+                                <!-- Google Logo SVG -->
+                                 <!-- <img src="google button.png" alt="google logo" class="social-btn-img"> -->
+                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M19.9895 10.1871C19.9895 9.36767 19.9214 8.76973 19.7742 8.14966H10.1992V11.848H15.8195C15.7062 12.7671 15.0943 14.1512 13.7346 15.0813L13.7155 15.2051L16.7429 17.4969L16.9527 17.5174C18.879 15.7789 19.9895 13.221 19.9895 10.1871Z" fill="#4285F4"/>
+                                    <path d="M10.1993 19.9313C12.9527 19.9313 15.2643 19.0454 16.9527 17.5174L13.7346 15.0813C12.8734 15.6682 11.7176 16.0779 10.1993 16.0779C7.50243 16.0779 5.21352 14.3395 4.39759 11.9366L4.27799 11.9466L1.13003 14.3273L1.08887 14.4391C2.76588 17.6945 6.21061 19.9313 10.1993 19.9313Z" fill="#34A853"/>
+                                    <path d="M4.39748 11.9366C4.18219 11.3166 4.05759 10.6521 4.05759 9.96565C4.05759 9.27909 4.18219 8.61473 4.38615 7.99466L4.38045 7.8626L1.19304 5.44366L1.08875 5.49214C0.397576 6.84305 0 8.36008 0 9.96565C0 11.5712 0.397576 13.0882 1.08875 14.4391L4.39748 11.9366Z" fill="#FBBC05"/>
+                                    <path d="M10.1993 3.85336C12.1142 3.85336 13.406 4.66168 14.1425 5.33717L17.0207 2.59107C15.253 0.985496 12.9527 0 10.1993 0C6.2106 0 2.76588 2.23672 1.08887 5.49214L4.38626 7.99466C5.21352 5.59183 7.50242 3.85336 10.1993 3.85336Z" fill="#EB4335"/> -->
+                                </svg>
+                                Google
+                            </button>
+
+                            <button type="button" class="social-btn">
+                                <!-- <img src="apple button.png" alt=""> -->
+                                <i class="ph-fill ph-apple-logo" style="font-size: 2.4rem;"></i>
+                                Apple
+                            </button>
+                        </div>
+                        
+                    </div>
+
+                    <!-- SIGN-IN LINK -->
+                    <div id="signin-link">
+                        Already have an account? <a href="planit-signin.html">Sign In</a>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

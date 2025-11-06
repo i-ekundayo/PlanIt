@@ -1,0 +1,444 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", "Montserrat", sans-serif;
+        }
+
+        html {
+            font-size: 62.5%; /* 1rem = 10px for easy calculations */
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #FFFFFF;
+        }
+
+
+        /*HEADER SECTION*/
+        .header {
+            display: none; /* Hidden on desktop, shows on mobile */
+            background-color: #1B2CC1;
+            padding: 1.5rem 0 0 0; /* Remove bottom padding */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .card-icon-wrapper > i {
+            color: white;
+            font-size: 3rem;
+            margin-left: 2rem;
+            cursor: pointer;
+        }
+
+
+        /*MAIN LAYOUT (Desktop)*/
+        .universal {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            background-color: #FFFFFF;
+        }
+
+        /* Left Side - Image Section */
+        .first-side {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+            padding: 4rem;
+        }
+
+        .first-side img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Right Side - Form Section */
+        .main-contents {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            background-color: white;
+        }
+
+        .sub-main-content {
+            width: 100%;
+            max-width: 48rem; /* Keeps form from getting too wide */
+        }
+
+
+        /*HEADING SECTION*/
+        .heading {
+            text-align: left; /* Left aligned on desktop as per UI design */
+            margin-bottom: 3rem;
+        }
+
+        .heading h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1B2CC1; /* Blue on desktop */
+        }
+
+        .heading p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            /* color: #6c757d; Gray on desktop */
+        }
+
+
+        /*FORM SECTION*/
+        .Keyboard {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; /* Space between each input group */
+            margin-bottom: 2rem;
+        }
+
+        /* Individual Input Group (Label + Input) */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .Keyboard-item {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* Input Wrapper for Password Fields (needed for eye icon positioning) */
+        .input-wrapper {
+            position: relative;
+        }
+
+        .Keyboard-item-input {
+            width: 100%;
+            padding: 1.4rem 1.6rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.8rem;
+            font-size: 1.5rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .Keyboard-item-input:focus {
+            outline: none;
+            border-color: #1B2CC1; /* Blue border when focused */
+        }
+
+        .Keyboard-item-input::placeholder {
+            color: #adb5bd;
+        }
+
+        /* Password Show/Hide Toggle Button */
+        .password-toggle {
+            position: absolute;
+            right: 1.6rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6c757d;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .password-toggle:hover {
+            color: #1B2CC1;
+        }
+
+
+        /* CHECKBOX SECTION*/
+        .checkbox-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .checkbox-row input {
+            width: 1.8rem;
+            height: 1.8rem;
+            cursor: pointer;
+        }
+
+        .checkbox-row label {
+            font-size: 1.4rem;
+            color: #495057;
+        }
+
+        .checkbox-row a {
+            color: #1B2CC1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        /*SUBMIT BUTTON */
+        .submit-btn {
+            width: 100%;
+            padding: 1.6rem;
+            border-radius: 3rem;
+            background-color: #1B2CC1;
+            color: white;
+            border: none;
+            font-size: 1.6rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 2.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #152399; /* Darker blue on hover */
+        }
+
+
+        /*OTHER SIGN-IN OPTIONS*/
+        .other-means {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* "Or" Divider Line */
+        .one-line {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .line {
+            flex: 1;
+            height: 1px;
+            background-color: #dee2e6;
+        }
+
+        .or-text {
+            color: #6c757d;
+            font-size: 1.4rem;
+        }
+
+        /* Google & Apple Buttons */
+        .other-options {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .social-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.2rem 2rem;
+            border: 1px solid #dee2e6;
+            border-radius: 0.8rem;
+            background-color: white;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            border-color: #adb5bd;
+            background-color: #f8f9fa;
+        }
+
+        .social-btn i {
+            font-size: 2rem;
+        }
+        .social-btn-img{
+            background-color:transparent;
+            /* padding: 20px 120px; */
+            border-color: #FFFFFF;
+            width:23.25rem;
+            height:6rem;
+        }
+        /*SIGN-IN LINK */
+        #signin-link {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.4rem;
+            color: #6c757d;
+        }
+
+        #signin-link a {
+            color: #1B2CC1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        /* MOBILE RESPONSIVE (Tablet & Phone)*/
+        @media (max-width: 875px) {
+            /* Show header with back button on mobile */
+            .header {
+                display: flex;
+                padding-bottom: 4rem;
+            }
+
+            /* Change body background to blue (like in mobile UI) */
+            body {
+                background-color: #1B2CC1;
+            }
+
+            .universal {
+                flex-direction: column;
+            }
+
+            /* Hide image section on mobile */
+            .first-side {
+                display: none;
+            }
+
+            /* Form takes full width */
+            .main-contents {
+                width: 100%;
+                padding: 8rem 0 0 0; /* Top padding for fixed header, no side padding */
+                align-items: stretch;
+                background-color: transparent;
+            }
+
+            .sub-main-content {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            /* Heading stays on blue background (NOT in white card) */
+            .heading {
+                padding: 1rem 2.5rem 3rem 2.5rem;
+                margin-bottom: 0; /* Remove margin since we have padding */
+                background-color: #1B2CC1; /* Ensure blue background */
+                text-align: left; /* Align to left on mobile */
+                margin: top 0px;
+            }
+
+            /* White text on blue background for mobile */
+            .heading h1 {
+                color: white;
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .heading p {
+                color: white;
+                /* opacity: 0.95; */
+                text-align: left;
+            }
+
+            /* Form gets white rounded top background */
+            .Keyboard {
+                background-color: white;
+                border-top-left-radius: 3rem;
+                border-top-right-radius: 3rem;
+                padding: 3rem 2.5rem;
+                /* flex-grow: 1; */
+            }
+
+            /* Adjust inputs for mobile */
+            .inputs {
+                gap: 2rem;
+            }
+
+            .Keyboard-item {
+                font-size: 1.3rem;
+            }
+
+            .Keyboard-item-input {
+                padding: 1.3rem 1.4rem;
+                font-size: 1.4rem;
+            }
+
+            /* Adjust checkbox for mobile */
+            .checkbox-row {
+                margin-bottom: 2rem;
+            }
+
+            .checkbox-row label {
+                font-size: 1.3rem;
+            }
+
+            /* Adjust button for mobile */
+            .submit-btn {
+                padding: 1.4rem;
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            /* Adjust social buttons for mobile */
+            .other-options {
+                gap: 1.2rem;
+            }
+
+            .social-btn {
+                padding: 1rem 1.5rem;
+                font-size: 1.4rem;
+            }
+
+            /* Adjust signin link */
+            #signin-link {
+                font-size: 1.3rem;
+                margin-top: 1.5rem;
+            }
+        }
+
+
+        /* ===========================
+           SMALL MOBILE SCREENS
+        =========================== */
+        @media (max-width: 500px) {
+            html {
+                font-size: 56.25%; /* Slightly smaller base font */
+            }
+
+            .heading h1 {
+                font-size: 2.4rem;
+            }
+
+            .heading p {
+                font-size: 1.3rem;
+            }
+
+            /* Keep social buttons side by side on small screens */
+            .other-options {
+                gap: 1rem;
+            }
+
+            .social-btn {
+                font-size: 1.3rem;
+                padding: 1rem 1.2rem;
+            }
+
+            .Keyboard {
+                padding: 2.5rem 2rem;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 380px) {
+            .social-btn {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
