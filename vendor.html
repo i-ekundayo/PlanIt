@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlanIt-Event Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
+    <link rel="stylesheet" href="vendor.css" />
+  </head>
+  <body>
+    <!-- Side-Bar -->
+    <div class="main__container">
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <img
+            src="images/logo image.png"
+            alt="Logo Image"
+            class="sidebar__logo"
+          />
+        </div>
+        <!-- sidebar content -->
+        <nav class="sidebar__nav">
+          <div class="sidebar__nav-container">
+            <ul class="sidebar__nav--items">
+              <li class="sidebar__nav-item">
+                <i class="ph ph-house-line"> </i
+                ><span class="sidebar__nav-text">Dashboard</span>
+              </li>
+              <li class="sidebar__nav-item sidebar__nav-item--active">
+                <i class="ph ph-users"></i>
+                <span class="sidebar__nav-text">Vendors</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-calendar-blank"></i>
+                <span class="sidebar__nav-text">Events</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-check-square"></i>
+                <span class="sidebar__nav-text">Tasks</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-chat"></i>
+                <span class="sidebar__nav-text">Messages</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-gear-six"></i>
+                <span class="sidebar__nav-text">Settings</span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Down Part of Aside -->
+
+        <div class="sidebar__user">
+          <div class="sidebar__user-avatar">SJ</div>
+          <div class="sidebar__user-info">
+            <p class="sidebar__user-name">Sarah Johnson</p>
+            <p class="sidebar__user-email">sarah@planit.com</p>
+          </div>
+        </div>
+      </aside>
+      <!-- Main Content Section -->
+      <main class="main">
+        <header class="header">
+          <!-- Title Section -->
+          <div class="header__vendor">
+            <div class="header__vendor__title--subtitle">
+              <h2 class="header__vendor__title">Vendors</h2>
+              <p class="header__vendor__subtitle">
+                Discover, search, filter, and collaborate with the right vendor
+                for every event.
+              </p>
+            </div>
+            <button class="create__new__events">+ Create New Events</button>
+          </div>
+
+          <!-- Search Section -->
+          <div class="header__search">
+            <div class="search__box">
+              <i class="ph ph-magnifying-glass"></i>
+              <input
+                type="text"
+                class="search__input"
+                placeholder="Search by event name..."
+              />
+            </div>
+            <div class="filters__btn">
+              <i class="ph ph-faders-horizontal"></i>
+              <h3 class="filter__text">Filters</h3>
+            </div>
+          </div>
+        </header>
+
+        <!-- Action Buuton Section -->
+
+        <div class="categories">
+          <button class="category__btn category__btn--primary">All</button>
+          <button class="category__btn">Catering</button>
+          <button class="category__btn">Decoration</button>
+          <button class="category__btn">Photography</button>
+          <button class="category__btn">Entertainment</button>
+          <button class="category__btn">Makeup & Styling</button>
+          <button class="category__btn">Lights & Sound</button>
+        </div>
+
+        <!-- Vendor Section -->
+        <div class="vendor__section">
+          <h3 class="vendor__card__title">Discover trusted vendors</h3>
+          <!-- Card One -->
+          <div class="vendor__card">
+            <!-- vendor Img part -->
+            <img
+              src="images/disc1.jpg"
+              alt="Mide's Kitchen Image"
+              class="vendor__img"
+            />
+
+            <!-- vendor Heading Subheading part -->
+            <div class="vendor__card--text">
+              <div class="vendor__heading--sub">
+                <h2 class="vendor__heading">Mide's Kitchen</h2>
+                <p class="vendor__subheading">Catering</p>
+              </div>
+
+              <!-- Location Review part -->
+              <div class="location__review">
+                <ul class="location__cont">
+                  <li class="loco location">
+                    <i class="ph ph-map-pin"></i>
+                    <span class="location__text">Ikeja, Lagos</span>
+                  </li>
+                  <li class="loco review">
+                    <i class="ph-fill ph-star"></i>
+                    <span class="review__count">4.8</span>
+                    <span class="reviewers">(249 reviewers)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- vendor Button part -->
+              <div class="vendor__cont--btn">
+                <button class="vendor__btn book__btn">Book</button>
+                <button class="vendor__btn view__btn__profile">
+                  View Profile
+                </button>
+              </div>
+            </div>
+
+            <!-- float verified badge -->
+            <button class="category__btn verified__cont">
+              <i class="ph ph-check"></i>
+              <span class="verified__btn--badge">Verified</span>
+            </button>
+          </div>
+
+          <!-- Card Twp -->
+
+          <div class="vendor__card">
+            <!-- vendor Img part -->
+            <img
+              src="images/disc2.jpg"
+              alt="Mide's Kitchen Image"
+              class="vendor__img"
+            />
+
+            <!-- vendor Heading Subheading part -->
+            <div class="vendor__card--text">
+              <div class="vendor__heading--sub">
+                <h2 class="vendor__heading">Bliss Decor</h2>
+                <p class="vendor__subheading">Decoration</p>
+              </div>
+
+              <!-- Location Review part -->
+              <div class="location__review">
+                <ul class="location__cont">
+                  <li class="loco location">
+                    <i class="ph ph-map-pin"></i>
+                    <span class="location__text">Lekki, Lagos</span>
+                  </li>
+                  <li class="loco review">
+                    <i class="ph-fill ph-star"></i>
+                    <span class="review__count">4.6</span>
+                    <span class="reviewers">(198 reviewers)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- vendor Button part -->
+              <div class="vendor__cont--btn">
+                <button class="vendor__btn book__btn">Book</button>
+                <button class="vendor__btn view__btn__profile">
+                  View Profile
+                </button>
+              </div>
+            </div>
+
+            <!-- float verified badge -->
+            <button class="category__btn verified__cont">
+              <i class="ph ph-check"></i>
+              <span class="verified__btn--badge">Verified</span>
+            </button>
+          </div>
+
+          <!-- Card Three -->
+          <div class="vendor__card">
+            <!-- Discovery Img part -->
+            <img
+              src="images/disc3.jpg"
+              alt="Mide's Kitchen Image"
+              class="vendor__img"
+            />
+
+            <!-- vendor Heading Subheading part -->
+            <div class="vendor__card--text">
+              <div class="vendor__heading--sub">
+                <h2 class="vendor__heading">FotoHub Studio</h2>
+                <p class="vendor__subheading">Photography</p>
+              </div>
+
+              <!-- Location Review part -->
+              <div class="location__review">
+                <ul class="location__cont">
+                  <li class="loco location">
+                    <i class="ph ph-map-pin"></i>
+                    <span class="location__text">Victoria Island, Lagos</span>
+                  </li>
+                  <li class="loco review">
+                    <i class="ph-fill ph-star"></i>
+                    <span class="review__count">4.9</span>
+                    <span class="reviewers">(132 reviewers)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- vendor Button part -->
+              <div class="vendor__cont--btn">
+                <button class="vendor__btn book__btn">Book</button>
+                <button class="vendor__btn view__btn__profile">
+                  View Profile
+                </button>
+              </div>
+            </div>
+
+            <!-- float verified badge -->
+            <button class="category__btn verified__cont">
+              <i class="ph ph-check"></i>
+              <span class="verified__btn--badge">Verified</span>
+            </button>
+          </div>
+
+          <!-- Card Four -->
+          <div class="vendor__card">
+            <!-- vendor Img part -->
+            <img
+              src="images/disc4.jpg"
+              alt="Mide's Kitchen Image"
+              class="vendor__img"
+            />
+
+            <!-- vendor Heading Subheading part -->
+            <div class="vendor__card--text">
+              <div class="vendor__heading--sub">
+                <h2 class="vendor__heading">DJ Sly</h2>
+                <p class="vendor__subheading">Entertainment</p>
+              </div>
+
+              <!-- Location Review part -->
+              <div class="location__review">
+                <ul class="location__cont">
+                  <li class="loco location">
+                    <i class="ph ph-map-pin"></i>
+                    <span class="location__text">Surulere, Lagos</span>
+                  </li>
+                  <li class="loco review">
+                    <i class="ph-fill ph-star"></i>
+                    <span class="review__count">4.7</span>
+                    <span class="reviewers">(198 reviewers)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- vendor Button part -->
+              <div class="vendor__cont--btn">
+                <button class="vendor__btn book__btn">Book</button>
+                <button class="vendor__btn view__btn__profile">
+                  View Profile
+                </button>
+              </div>
+            </div>
+
+            <!-- float verified badge -->
+            <button class="category__btn verified__cont">
+              <i class="ph ph-check"></i>
+              <span class="verified__btn--badge">Verified</span>
+            </button>
+          </div>
+
+          <!-- Card Five -->
+          <div class="vendor__card">
+            <!-- Discovery Img part -->
+            <img
+              src="images/disc5.jpg"
+              alt="Mide's Kitchen Image"
+              class="vendor__img"
+            />
+
+            <!-- vendor Heading Subheading part -->
+            <div class="vendor__card--text">
+              <div class="vendor__heading--sub">
+                <h2 class="vendor__heading">Glam Beauty Srudio</h2>
+                <p class="vendor__subheading">Makeup & Styling</p>
+              </div>
+
+              <!-- Location Review part -->
+              <div class="location__review">
+                <ul class="location__cont">
+                  <li class="loco location">
+                    <i class="ph ph-map-pin"></i>
+                    <span class="location__text">Lekki Phase 1, Lagos</span>
+                  </li>
+                  <li class="loco review">
+                    <i class="ph-fill ph-star"></i>
+                    <span class="review__count">4.8</span>
+                    <span class="reviewers">(223 reviewers)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- vendor Button part -->
+              <div class="vendor__cont--btn">
+                <button class="vendor__btn book__btn">Book</button>
+                <button class="vendor__btn view__btn__profile">
+                  View Profile
+                </button>
+              </div>
+            </div>
+
+            <!-- float verified badge -->
+            <button class="category__btn verified__cont">
+              <i class="ph ph-check"></i>
+              <span class="verified__btn--badge">Verified</span>
+            </button>
+          </div>
+
+          <!-- Card Six -->
+          <div class="vendor__card">
+            <!-- vendor Img part -->
+            <img
+              src="images/disc6.jpg"
+              alt="Mide's Kitchen Image"
+              class="vendor__img"
+            />
+
+            <!-- vendor Heading Subheading part -->
+            <div class="vendor__card--text">
+              <div class="vendor__heading--sub">
+                <h2 class="vendor__heading">Soundwave Entertainment</h2>
+                <p class="vendor__subheading">Lights & Sound</p>
+              </div>
+
+              <!-- Location Review part -->
+              <div class="location__review">
+                <ul class="location__cont">
+                  <li class="loco location">
+                    <i class="ph ph-map-pin"></i>
+                    <span class="location__text">Yaba, Lagos</span>
+                  </li>
+                  <li class="loco review">
+                    <i class="ph-fill ph-star"></i>
+                    <span class="review__count">4.8</span>
+                    <span class="reviewers">(187 reviewers)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- vendor Button part -->
+              <div class="vendor__cont--btn">
+                <button class="vendor__btn book__btn">Book</button>
+                <button class="vendor__btn view__btn__profile">
+                  View Profile
+                </button>
+              </div>
+            </div>
+
+            <!-- float verified badge -->
+            <button class="category__btn verified__cont">
+              <i class="ph ph-check"></i>
+              <span class="verified__btn--badge">Verified</span>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
