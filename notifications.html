@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlanIt-Event Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
+    <link rel="stylesheet" href="notification.css" />
+  </head>
+  <body>
+    <!-- Side-Bar -->
+    <div class="main__container">
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <img
+            src="images/logo image.png"
+            alt="Logo Image"
+            class="sidebar__logo"
+          />
+        </div>
+        <!-- sidebar content -->
+        <nav class="sidebar__nav">
+          <div class="sidebar__nav-container">
+            <ul class="sidebar__nav--items">
+              <li class="sidebar__nav-item">
+                <i class="ph ph-house-line"> </i
+                ><span class="sidebar__nav-text">Dashboard</span>
+              </li>
+              <li class="sidebar__nav-item sidebar__nav-item--active">
+                <i class="ph ph-users"></i>
+                <span class="sidebar__nav-text">Vendors</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-calendar-blank"></i>
+                <span class="sidebar__nav-text">Events</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-check-square"></i>
+                <span class="sidebar__nav-text">Tasks</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-chat"></i>
+                <span class="sidebar__nav-text">Messages</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-gear-six"></i>
+                <span class="sidebar__nav-text">Settings</span>
+              </li>
+            </ul>
+          </nav>
+          <!-- Down Part of Aside -->
+          
+          <div class="sidebar__user">
+            <div class="sidebar__user-avatar">SJ</div>
+            <div class="sidebar__user-info">
+              <p class="sidebar__user-name">Sarah Johnson</p>
+              <p class="sidebar__user-email">sarah@planit.com</p>
+            </div>
+          </div>
+        </aside>
+
+
+        <!-- Main Content Section -->
+        <main class="main">
+          <header class="header__notification">
+            <!-- Title Section -->
+            <h2 class="header__notification__title">Notifications</h2>
+            <p class="header__notification__subtitle">
+              Stay updated with your events, tasks, and booking
+            </p>
+          </header>
+          
+          <!-- Action Buuton Section -->
+          
+          <div class="notification__update">
+            <button class="notification__btn notification__btn--mark">Mark as read</button>
+            <button class="notification__btn notification__btn--clear">Clear ass</button>
+          </div>
+          <div class="categories">
+            <button class="category__btn category__btn--primary">All (7)</button>
+            <button class="category__btn">Unread (3)</button>
+            <button class="category__btn">Messages</button>
+            <button class="category__btn">Tasks</button>
+            <button class="category__btn">Events</button>
+          </div>
+          <div class="notification__container">
+
+          <!-- message 1 -->
+          <div class="notification__message__box">
+            <div class="new__message read">
+              <i class="ph ph-chat notification__icon"></i>
+              <div class="message__info">
+                <h3 class="message__title">New message from Mide's Kitchen</h3>
+                <p class="message__subtitle">The menu has been finalized! 📎 menu_final.pdf</p>
+                <p class="message__hour">2 hours ago</p>
+              </div>
+            </div>
+            <div class="message__badge">New</div>
+          </div>
+
+           <!-- message 2 -->
+          <div class="notification__message__box">
+            <div class="new__message read">
+              <i class="ph ph-check-circle notification__icon"></i>
+              <div class="message__info">
+                <h3 class="message__title">Bliss Decor confirmed booking</h3>
+                <p class="message__subtitle">Bliss Decore confirmed booking for corporate party-GTBank lagos team</p>
+                <p class="message__hour">5 hours ago</p>
+              </div>
+            </div>
+            <div class="message__badge">New</div>
+          </div>
+
+           <!-- message 3 -->
+          <div class="notification__message__box">
+            <div class="new__message read">
+              <i class="ph ph-check-square notification__icon"></i>
+              <div class="message__info">
+                <h3 class="message__title">Task deadline approaching</h3>
+                <p class="message__subtitle">Your task 'traditional engagements- Ada & Chike' is due tomorrow</p>
+                <p class="message__hour">2 hours ago</p>
+              </div>
+            </div>
+            <div class="message__badge">New</div>
+          </div>
+
+           <!-- message 4 -->
+          <div class="notification__message__box">
+            <div class="new__message read">
+              <i class="ph ph-chat notification__icon"></i>
+              <div class="message__info">
+                <h3 class="message__title">New message from DJ Sly</h3>
+                <p class="message__subtitle">Playlist is ready for review</p>
+                <p class="message__hour">24 hours ago</p>
+              </div>
+            </div>
+            <div class="message__badge">New</div>
+          </div>
+
+           <!-- message 5-->
+          <div class="notification__message__box">
+            <div class="new__message read">
+              <i class="ph ph-check-square notification__icon"></i>
+              <div class="message__info">
+                <h3 class="message__title">Task Completed</h3>
+                <p class="message__subtitle">Your Task 'Review photography timeline' is completed</p>
+                <p class="message__hour">1 day ago</p>
+              </div>
+            </div>
+            <div class="message__badge">New</div>
+          </div>
+
+           <!-- message 6 -->
+          <div class="notification__message__box">
+            <div class="new__message read">
+              <i class="ph ph-chat notification__icon"></i>
+              <div class="message__info">
+                <h3 class="message__title">Event sucessfully completed</h3>
+                <p class="message__subtitle">Corporate gala dinner event is successfully completed</p>
+                <p class="message__hour">1 day ago</p>
+              </div>
+            </div>
+            <div class="message__badge">New</div>
+          </div>
+
+ <!-- message 6 -->
+          <div class="notification__message__box">
+            <div class="new__message read">
+              <i class="ph ph-chat notification__icon"></i>
+              <div class="message__info">
+                <h3 class="message__title">New message from Foto Hub</h3>
+                <p class="message__subtitle">Kindly review the photos</p>
+                <p class="message__hour">2 day ago</p>
+              </div>
+            </div>
+            <div class="message__badge">New</div>
+          </div>
+        </div>
+
+        </main> 
+    </div>
+  </body>
+</html>
+
+
+
