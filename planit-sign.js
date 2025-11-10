@@ -37,11 +37,10 @@ const errorDisplay = (message) => {
 const successDisplay = (message) => {
   const newDiv = document.createElement("div");
   newDiv.classList.add("error");
-  newDiv.style.background = 'green';
+  newDiv.style.background = "green";
   newDiv.textContent = message;
   errors.appendChild(newDiv);
 };
-
 
 // Checking Number of errors
 const errorCheck = (error) => {
@@ -50,7 +49,7 @@ const errorCheck = (error) => {
       errorDisplay(err.message);
     });
   } else {
-    errorDisplay(error)
+    errorDisplay(error);
   }
   setTimeout(() => {
     errors.innerHTML = "";
@@ -80,17 +79,17 @@ const signUp = async () => {
 
     if (!response.ok) {
       const data = await response.json();
-      
+
       throw data.errors || data.message;
     }
 
     const data = await response.json();
-    
-    successDisplay(data.message);
+    console.log(data);
 
-   
+    sessionStorage.setItem("message", data.message);
+    localStorage.setItem("userId", data.data.userId);
+
     window.location.replace("verify-email.html");
-    
   } catch (error) {
     errorCheck(error);
   }
