@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlanIt-Event Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <!-- Side-Bar -->
+    <div class="main__container">
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <img
+            src="images/logo image.png"
+            alt="Logo Image"
+            class="sidebar__logo"
+          />
+        </div>
+        <!-- sidebar content -->
+        <nav class="sidebar__nav">
+          <div class="sidebar__nav-container">
+            <ul class="sidebar__nav--items">
+              <li class="sidebar__nav-item">
+                <i class="ph ph-house-line"> </i
+                ><span class="sidebar__nav-text">Dashboard</span>
+              </li>
+              <li class="sidebar__nav-item sidebar__nav-item--active">
+                <i class="ph ph-users"></i>
+                <span class="sidebar__nav-text">Vendors</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-calendar-blank"></i>
+                <span class="sidebar__nav-text">Events</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-check-square"></i>
+                <span class="sidebar__nav-text">Tasks</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-chat"></i>
+                <span class="sidebar__nav-text">Messages</span>
+              </li>
+              <li class="sidebar__nav-item">
+                <i class="ph ph-gear-six"></i>
+                <span class="sidebar__nav-text">Settings</span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Down Part of Aside -->
+
+        <div class="sidebar__user">
+          <div class="sidebar__user-avatar">SJ</div>
+          <div class="sidebar__user-info">
+            <p class="sidebar__user-name">Sarah Johnson</p>
+            <p class="sidebar__user-email">sarah@planit.com</p>
+          </div>
+        </div>
+      </aside>
+      <!-- Main Content Section -->
+      <main class="main">
+        <header class="header">
+          <!-- Title Section -->
+          <div class="header__vendor">
+            <div class="header__vendor__title--subtitle">
+              <h2 class="header__vendor__title">Settings</h2>
+              <p class="header__vendor__subtitle">
+                Manage your account settings and preferences
+              </p>
+            </div>
+            <button class="create__new__events">+ Create Events</button>
+          </div>
+        </header>
+
+        <section--one class="settings__cont">
+            <div class="profile__setting">
+              <div class="profile__avatar__upload">
+                <div class="avatar__img">SJ</div>
+                <button class="profile__btn profile__upload--btn">Upload Photo</button>
+              </div>
+            </div>
+
+
+            <!-- second col. -->
+              <div class="profile__input__container">
+                <div class="profile__inputs">
+                  <i class="ph ph-user profile__input--icon"></i>
+                  <span class="profile__input--title">Profile Setting</span>
+                </div>
+
+                <!-- input 1 -->
+              <div class="profile__form--cont">
+                <div class="profile__form">
+                  <label class="profile__form--label">Full Name</label>
+                  <input
+                    type="text"
+                    class="profile__form--input"
+                    value="Sarah Johnson"
+                  />
+                </div>
+
+                <!-- input 2 -->
+                <div class="profile__form">
+                  <label class="profile__form--label">Email Address</label>
+                  <input
+                    type="text"
+                    class="profile__form--input"
+                    value="sarahj@planit.com"
+                  />
+                </div>
+
+                <!-- input 3 -->
+                <div class="profile__form">
+                  <label class="profile__form--label">Phone Number</label>
+                  <input
+                    type="text"
+                    class="profile__form--input"
+                    value="+234 801 234 5678"
+                  />
+                </div>
+
+                <!-- input 4 -->
+                <div class="profile__form">
+                  <label class="profile__form--label">location</label>
+                  <input type="text" class="profile__form--input" value="Lagos" />
+                </div>
+
+                <!-- textarea -->
+                <div class="profile__form profile__textarea">
+                  <label class="profile__form--label">Bio</label>
+                  <textarea
+                    class="profile__form--input"
+                    rows="4"
+                    placeholder="Tell us about yourself..."
+                  ></textarea>
+                </div> 
+                <div class="save__cancel--btn">
+                  <button class="profile__btn profile__input--btn cancel__btn">Cancel</button>
+                  <button class="profile__btn profile__input--btn savechanges__btn">Save Changes</button>
+                </div>               
+              </div>
+
+              </div>
+            </section--one>
+            <!-- Notification Preferences section -->
+            <section--two class="notification__preference--cont">
+              <div class="notification__preferences">
+                <i class="ph ph-bell notification__icon"></i>
+                <span class="notification__preferences--title">Notification Preferences</span>
+              </div>
+
+              <!-- Enable -->
+              <div class="notif__box">
+                <div class="notif__items">
+                  <h3 class="notif__title">Enable Notifications</h3>
+                  <p class="notif__subtitle">Recieve notifications via email</p>
+                </div>
+                <div class="toggle notif__toggle--on">
+                  <div class="notif__toggle--knob"></div>
+                </div>
+              </div>
+
+              
+              <!-- Push -->
+              <div class="notif__box">
+                <div class="notif__items">
+                  <h3 class="notif__title">Push Notifications</h3>
+                  <p class="notif__subtitle">Receive notifications in browser </p>
+                </div>
+                <div class="toggle notif__toggle--on">
+                  <div class="notif__toggle--knob"></div>
+                </div>
+              </div>
+
+              
+              <!-- SMS -->
+              <div class="notif__box">
+                <div class="notif__items">
+                  <h3 class="notif__title">SMS Notifications</h3>
+                  <p class="notif__subtitle">Receive text messages for important updates</p>
+                </div>
+                <div class="toggle notif__toggle--on notif__toggle--off">
+                  <div class="notif__toggle--knob"></div>
+                </div>
+              </div>
+
+              
+              <!-- Events -->
+              <div class="notif__box">
+                <div class="notif__items">
+                  <h3 class="notif__title">Events Reminders</h3>
+                  <p class="notif__subtitle">Get reminded about upcoming events</p>
+                </div>
+                <div class="toggle notif__toggle--on">
+                  <div class="notif__toggle--knob"></div>
+                </div>
+              </div>
+
+              
+              <!-- Task -->
+              <div class="notif__box">
+                <div class="notif__items">
+                  <h3 class="notif__title">Task Deadlines</h3>
+                  <p class="notif__subtitle">Alerts for approaching task deadlines</p>
+                </div>
+                <div class="toggle notif__toggle--on">
+                  <div class="notif__toggle--knob"></div>
+                </div>
+              </div>
+
+              
+              <!-- Vendor -->
+              <div class="notif__box">
+                <div class="notif__items">
+                  <h3 class="notif__title">Vendor Messages</h3>
+                  <p class="notif__subtitle">Notifications for new vendor messages</p>
+                </div>
+                <div class="toggle notif__toggle--on">
+                  <div class="notif__toggle--knob"></div>
+                </div>
+              </div>
+            </section--two>
+
+            <section--three class="validation__cards">
+              <!-- card 1 -->
+              <div class="validation">
+                <div class="validation__icon--title">
+                  <i class="ph ph-shield-warning validation__icon"></i>
+                  <h2 class="validation__title">
+                    Security
+                  </h2>
+                </div>
+                <p class="validation__subtitle">Manage your password and security settings</p>
+                <button class="validation__btn">Change Password</button>
+              </div>
+
+               <!-- card 2 -->
+              <div class="validation">
+                <div class="validation__icon--title">
+                  <i class="ph ph-gauge validation__icon"></i>
+                  <h2 class="validation__title">
+                    Visibility Setting
+                  </h2>
+                </div>
+                <p class="validation__subtitle">View and manage your visibility</p>
+                <button class="validation__btn">Manage Visibility</button>
+              </div>
+
+               <!-- card 3 -->
+              <div class="validation">
+                <div class="validation__icon--title">
+                  <i class="ph ph-globe validation__icon"></i>
+                  <h2 class="validation__title">
+                    Language & Region
+                  </h2>
+                </div>
+                <p class="validation__subtitle">Set your preferred language and timezone</p>
+                <button class="validation__btn">Update preferences</button>
+              </div>
+
+               <!-- card 4 -->
+              <div class="validation">
+                <div class="validation__icon--title">
+                  <i class="ph ph-question validation__icon"></i>
+                  <h2 class="validation__title">
+                    Help & Support
+                  </h2>
+                </div>
+                <p class="validation__subtitle">Get help or contact support team</p>
+                <button class="validation__btn">Contact Support</button>
+              </div>
+
+               <!-- card 5 -->
+              <div class="validation danger__validation">
+                <div class="validation__icon--title">
+                  <i class="ph ph-arrow-square-right validation__icon--danger"></i>
+                  <h2 class="validation__title">
+                    Danger Zone
+                  </h2>
+                </div>
+                <p class="validation__subtitle">Once you delete your account, there is no going back. Please be certain.</p>
+                <div class="delete__signout">
+                  <button class="validation__btn delete__btn">Delete Account</button>
+                  <button class="validation__btn signout__btn">Sign Out</button>
+                </div>
+
+              </div>
+            </section--three>
+          </main>
+        </div>
+    </div>
+  </body>
+</html>
