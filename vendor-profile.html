@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="vendor-profile.css" />
   </head>
   <body>
+    <div class="message"></div>
     <main>
       <img src="./images/image 1.png" alt="image.png" />
       <div class="form-container">
@@ -85,15 +86,17 @@
             <label><p>CAC Certificate</p></label>
             <label class="form__label" for="cac">
               <div class="form__upload">
-                <img src="./images/upload (1).svg" alt="upload.png">
-                <p>Click to upload or drag and drop</p>
+                <img id="previewImage" src="./images/upload (1).svg" alt="upload.png">
+                <p id="uploadText">Click to upload or drag and drop</p>
                 <p>PDF, PNG, or JPG (max. 5MB)</p>
+                <p id="fileName" style="font-weight: 600; margin-top: 5px;"></p>
               </div>
             </label>
+          
             <input
               type="file"
               id="cac"
-              placeholder="e.g. https://instagram.com/planit?ighnfgdfghjk"
+              accept="image/*,application/pdf"
               required
               hidden
             />
