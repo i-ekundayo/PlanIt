@@ -42,6 +42,30 @@ a {
   text-decoration: none;
 }
 
+.errors {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.error {
+  padding: 10px;
+  background: red;
+  color: white;
+}
+
+.success {
+  padding: 10px;
+  background: green;
+  color: white;
+}
+
 /* Sidebar */
 .sidebar {
   display: flex;
