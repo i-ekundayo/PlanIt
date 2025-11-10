@@ -24,6 +24,7 @@
   --System-color-Success: #2e7d32;
   --System-color-Info: #0288d1;
   --System-color-Warning: #f9a825;
+  --System-color-Error: #d32f2f;
 }
 
 body {
@@ -405,6 +406,145 @@ a {
 .event__status--upcoming {
   background: rgba(249, 168, 37, 0.1);
   color: var(--System-color-Warning);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  display: none;
+  padding: 24px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 16px;
+  background: var(--Neutral-color-Neutral-50);
+  z-index: 999;
+}
+
+.modal.show {
+  display: flex;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.modal__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.modal__heading > h2 {
+  color: var(--Primary-color-blue-500);
+}
+
+.modal__heading>img {
+  cursor: pointer;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.modal__input {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.modal__input > label {
+  color: var(--Neutral-color-Neutral-900);
+  font-size: 12px;
+}
+
+.modal__input span {
+  color: var(--System-color-Error);
+}
+
+.modal__input > input {
+  padding: 4px 12px;
+  align-self: stretch;
+  border-radius: 14px;
+  border: 1px solid var(--Primary-color-blue-200);
+  background: var(--Neutral-color-Neutral-200);
+  outline: none;
+  height: 35px;
+}
+
+.modal__input--textarea {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: stretch;
+}
+
+.modal__input > textarea {
+  padding: 4px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--Primary-color-blue-200);
+  background: var(--Neutral-color-Neutral-200);
+  outline: none;
+  height: 70px;
+  overflow: hidden;
+}
+
+.modal__datetime {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.modal__buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.modal__button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid var(--Primary-color-blue-400);
+  background: var(--Neutral-color-Neutral-50);
+  color: var(--Primary-color-blue-500);
+  cursor: pointer;
+}
+
+.modal__button--create-event {
+  background: var(--Primary-color-blue-500);
+  color: var(--Neutral-color-Neutral-50);
+  border: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.5;
+  display: none;
+  z-index: 10;
+  inset: 0;
+}
+
+.overlay.show {
+  display: flex;
 }
 
 @media (max-width: 980px) {

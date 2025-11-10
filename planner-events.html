@@ -22,7 +22,10 @@
           <ul class="sidebar__links">
             <li class="sidebar__link">
               <a href="planner-dashboard.html">
-                <img src="./images/planner-images/Dashboard  Black Icon.svg" alt="home.png" />
+                <img
+                  src="./images/planner-images/Dashboard  Black Icon.svg"
+                  alt="home.png"
+                />
                 <p>Dashboard</p>
               </a>
             </li>
@@ -37,7 +40,10 @@
             </li>
             <li class="sidebar__link active">
               <a href="planner-events.html">
-                <img src="./images/planner-images/Events White Icon.svg" alt="event.png" />
+                <img
+                  src="./images/planner-images/Events White Icon.svg"
+                  alt="event.png"
+                />
                 <p>Events</p>
               </a>
             </li>
@@ -130,9 +136,11 @@
             <div class="event__card--body">
               <div class="title__cont">
                 <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--completed">Completed</div>
+                <div class="event__status event__status--completed">
+                  Completed
+                </div>
               </div>
-             
+
               <div class="card__date">
                 <img src="./images/planner-images/Events.svg" alt="event.png" />
                 <p>Nov 7, 2025</p>
@@ -241,7 +249,9 @@
             <div class="event__card--body">
               <div class="title__cont">
                 <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--upcoming">Upcoming</div>
+                <div class="event__status event__status--upcoming">
+                  Upcoming
+                </div>
               </div>
               <div class="card__date">
                 <img src="./images/planner-images/Events.svg" alt="event.png" />
@@ -296,7 +306,9 @@
             <div class="event__card--body">
               <div class="title__cont">
                 <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--completed">Completed</div>
+                <div class="event__status event__status--completed">
+                  Completed
+                </div>
               </div>
               <div class="card__date">
                 <img src="./images/planner-images/Events.svg" alt="event.png" />
@@ -516,7 +528,9 @@
             <div class="event__card--body">
               <div class="title__cont">
                 <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--completed">Completed</div>
+                <div class="event__status event__status--completed">
+                  Completed
+                </div>
               </div>
               <div class="card__date">
                 <img src="./images/planner-images/Events.svg" alt="event.png" />
@@ -571,7 +585,9 @@
             <div class="event__card--body">
               <div class="title__cont">
                 <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--upcoming">Upcoming</div>
+                <div class="event__status event__status--upcoming">
+                  Upcoming
+                </div>
               </div>
               <div class="card__date">
                 <img src="./images/planner-images/Events.svg" alt="event.png" />
@@ -624,6 +640,58 @@
         </div>
       </section>
     </main>
+
+    <!-- Modal -->
+    <section class="modal">
+      <div class="modal__heading">
+        <h2>Create New Event</h2>
+        <img src="./images/planner-images/mi_close.svg" alt="close.btn" />
+      </div>
+      <form action="" class="modal__form">
+        <div class="modal__input">
+          <label for="event__name">Event Name <span>*</span></label>
+          <input id="event__name" type="text" placeholder="Sarah Johnson" />
+        </div>
+        <div class="modal__input">
+          <label for="event__type">Event Type <span>*</span></label>
+          <input id="event__type" type="text" placeholder="Sarah Johnson" />
+        </div>
+        <div class="modal__datetime">
+          <div class="modal__input">
+            <label for="date">Date <span>*</span></label>
+            <input id="date" type="date" placeholder="Sarah Johnson" />
+          </div>
+          <div class="modal__input">
+            <label for="time">Time <span>*</span></label>
+            <input id="time" type="time" placeholder="Sarah Johnson" />
+          </div>
+        </div>
+        <div class="modal__input">
+          <label for="location">Location <span>*</span></label>
+          <input id="location" type="text" placeholder="Sarah Johnson" />
+        </div>
+        <div class="modal__input">
+          <label for="guests">Number of guests <span>*</span></label>
+          <input id="guests" type="text" placeholder="Sarah Johnson" />
+        </div>
+        <div class="modal__input modal__input--textarea">
+          <label for="bio">Bio</label>
+          <textarea id="bio"></textarea>
+        </div>
+        <div class="modal__buttons">
+          <button class="modal__button modal__button--cancel">Cancel</button>
+          <button
+            type="submit"
+            class="modal__button modal__button--create-event"
+          >
+            Create Event
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Overlay -->
+     <div class="overlay"><h1>SHOW</h1></div>
 
     <script src="planner-events.js"></script>
   </body>

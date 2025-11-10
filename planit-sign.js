@@ -20,13 +20,31 @@ function togglePassword(inputId) {
   }
 }
 
-
+const signUpBtn = document.querySelector(".sign-up");
 const fullName = document.getElementById("fnm");
 const email = document.getElementById("em");
 const password = document.getElementById("ps");
 
+// Displaying Error
+const errorDisplay = (message) => {
+  const newDiv = document.createElement("div");
+  newDiv.classList.add("error");
+  newDiv.textContent = message;
+  errors.appendChild(newDiv);
+};
+
+// Checking Number of errors
+const errorCheck = (errorMessages) => {
+  errorMessages.forEach((error) => {
+    errorDisplay(error.message);
+  });
+  setTimeout(() => {
+    errors.innerHTML = "";
+  }, 5000);
+};
 
 // Creating a POST request for Signup
+const errors = document.querySelector(".errors");
 const signUp = async () => {
   try {
     const response = await fetch(
@@ -40,21 +58,36 @@ const signUp = async () => {
           email: email.value,
           password: password.value,
           fullName: fullName.value,
-          role: "",
+          role: "planner",
           phoneNumber: "",
         }),
       }
     );
-
-    console.log('clicked');
     
-    console.log(response);
-    const data = await response.json();
-    console.log("✅ Success:", data); 
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.log(errorData);
+
+      throw new Error(errorData.message);
+    }
+
+    // const data = await response.json();
+    // const errors = data.error;
+
+    // const errorMessages = errors.map((error) => error.message);
+    // console.log(errorMessages);
+    
+
+    // if (errorMessages !== "") {
+    //   // errorCheck(errorMessages);
+    // } else {
+    //   console.log(data);
+    //   window.location.replace("verify-email.html");
+    // }
   } catch (error) {
-    console.error("Error:", error.message);
+    errorCheck(error.message);
   }
 };
 
-
-signUp();
+signUpBtn.addEventListener("click", signUp);
