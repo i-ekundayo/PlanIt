@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="planner-events.css" />
   </head>
   <body class="container">
+    <div class="errors"></div>
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="sidebar__menus">
@@ -131,512 +132,69 @@
           <h2 class="event__header heading">Events</h2>
         </div>
         <div class="event__cards">
-          <div class="event__card">
-            <div class="event__card--heading"></div>
-            <div class="event__card--body">
-              <div class="title__cont">
-                <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--completed">
-                  Completed
+          <template class="eventCardTemplate">
+            <div class="event__card">
+              <div class="event__card--heading"></div>
+              <div class="event__card--body">
+                <div class="title__cont">
+                  <h3 class="card__title">Baby Shower - William's</h3>
+                  <div class="event__status event__status--completed">
+                    Completed
+                  </div>
                 </div>
-              </div>
 
-              <div class="card__date">
-                <img src="./images/planner-images/Events.svg" alt="event.png" />
-                <p>Nov 7, 2025</p>
-              </div>
-              <div class="card__time">
-                <img src="./images/planner-images/time.svg" alt="event.png" />
-                <p>6:00 PM</p>
-              </div>
-              <div class="card__venue">
-                <img
-                  src="./images/planner-images/location.svg"
-                  alt="event.png"
-                />
-                <p>Eko Signature Suites</p>
-              </div>
-              <div class="card__progress">
-                <div class="card__progress--text">
-                  <p>Progress</p>
-                  <p>97%</p>
-                </div>
-                <div class="progress">
-                  <div class="progress__bar"></div>
-                </div>
-              </div>
-              <div class="card__summary">
-                <div class="card__vendors">
+                <div class="card__date">
                   <img
-                    src="./images/planner-images/vendorss.svg"
-                    alt="vendor.png"
+                    src="./images/planner-images/Events.svg"
+                    alt="event.png"
                   />
-                  <div class="card__vendors--text">
-                    <p>Vendors</p>
-                    <p>6</p>
+                  <p>Nov 7, 2025</p>
+                </div>
+                <div class="card__time">
+                  <img src="./images/planner-images/time.svg" alt="event.png" />
+                  <p>6:00 PM</p>
+                </div>
+                <div class="card__venue">
+                  <img
+                    src="./images/planner-images/location.svg"
+                    alt="event.png"
+                  />
+                  <p>Eko Signature Suites</p>
+                </div>
+                <div class="card__progress">
+                  <div class="card__progress--text">
+                    <p>Progress</p>
+                    <p>97%</p>
+                  </div>
+                  <div class="progress">
+                    <div class="progress__bar"></div>
                   </div>
                 </div>
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/taskss.svg"
-                    alt="task.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Tasks</p>
-                    <p>33/35</p>
+                <div class="card__summary">
+                  <div class="card__vendors">
+                    <img
+                      src="./images/planner-images/vendorss.svg"
+                      alt="vendor.png"
+                    />
+                    <div class="card__vendors--text">
+                      <p>Vendors</p>
+                      <p>6</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event__card">
-            <div class="event__card--heading"></div>
-            <div class="event__card--body">
-              <div class="title__cont">
-                <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--active">Active</div>
-              </div>
-              <div class="card__date">
-                <img src="./images/planner-images/Events.svg" alt="event.png" />
-                <p>Nov 10, 2025</p>
-              </div>
-              <div class="card__time">
-                <img src="./images/planner-images/time.svg" alt="event.png" />
-                <p>11:00 AM</p>
-              </div>
-              <div class="card__venue">
-                <img
-                  src="./images/planner-images/location.svg"
-                  alt="event.png"
-                />
-                <p>Civic Centre, Lagos Island</p>
-              </div>
-              <div class="card__progress">
-                <div class="card__progress--text">
-                  <p>Progress</p>
-                  <p>80%</p>
-                </div>
-                <div class="progress">
-                  <div class="progress__bar"></div>
-                </div>
-              </div>
-              <div class="card__summary">
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/vendorss.svg"
-                    alt="vendor.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Vendors</p>
-                    <p>8</p>
-                  </div>
-                </div>
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/taskss.svg"
-                    alt="task.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Tasks</p>
-                    <p>31/35</p>
+                  <div class="card__vendors">
+                    <img
+                      src="./images/planner-images/taskss.svg"
+                      alt="task.png"
+                    />
+                    <div class="card__vendors--text">
+                      <p>Tasks</p>
+                      <p>33/35</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="event__card">
-            <div class="event__card--heading"></div>
-            <div class="event__card--body">
-              <div class="title__cont">
-                <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--upcoming">
-                  Upcoming
-                </div>
-              </div>
-              <div class="card__date">
-                <img src="./images/planner-images/Events.svg" alt="event.png" />
-                <p>Nov 19, 2025</p>
-              </div>
-              <div class="card__time">
-                <img src="./images/planner-images/time.svg" alt="event.png" />
-                <p>7:00 PM</p>
-              </div>
-              <div class="card__venue">
-                <img
-                  src="./images/planner-images/location.svg"
-                  alt="event.png"
-                />
-                <p>The View Rooftop, Lekki Phase 1</p>
-              </div>
-              <div class="card__progress">
-                <div class="card__progress--text">
-                  <p>Progress</p>
-                  <p>67%</p>
-                </div>
-                <div class="progress">
-                  <div class="progress__bar"></div>
-                </div>
-              </div>
-              <div class="card__summary">
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/vendorss.svg"
-                    alt="vendor.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Vendors</p>
-                    <p>6</p>
-                  </div>
-                </div>
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/taskss.svg"
-                    alt="task.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Tasks</p>
-                    <p>14/25</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event__card">
-            <div class="event__card--heading"></div>
-            <div class="event__card--body">
-              <div class="title__cont">
-                <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--completed">
-                  Completed
-                </div>
-              </div>
-              <div class="card__date">
-                <img src="./images/planner-images/Events.svg" alt="event.png" />
-                <p>Nov 22, 2025</p>
-              </div>
-              <div class="card__time">
-                <img src="./images/planner-images/time.svg" alt="event.png" />
-                <p>12:00 PM</p>
-              </div>
-              <div class="card__venue">
-                <img
-                  src="./images/planner-images/location.svg"
-                  alt="event.png"
-                />
-                <p>Convention Center</p>
-              </div>
-              <div class="card__progress">
-                <div class="card__progress--text">
-                  <p>Progress</p>
-                  <p>45%</p>
-                </div>
-                <div class="progress">
-                  <div class="progress__bar"></div>
-                </div>
-              </div>
-              <div class="card__summary">
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/vendorss.svg"
-                    alt="vendor.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Vendors</p>
-                    <p>6</p>
-                  </div>
-                </div>
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/taskss.svg"
-                    alt="task.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Tasks</p>
-                    <p>18/35</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event__card">
-            <div class="event__card--heading"></div>
-            <div class="event__card--body">
-              <div class="title__cont">
-                <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--active">Active</div>
-              </div>
-              <div class="card__date">
-                <img src="./images/planner-images/Events.svg" alt="event.png" />
-                <p>Nov 22, 2025</p>
-              </div>
-              <div class="card__time">
-                <img src="./images/planner-images/time.svg" alt="event.png" />
-                <p>12:00 PM</p>
-              </div>
-              <div class="card__venue">
-                <img
-                  src="./images/planner-images/location.svg"
-                  alt="event.png"
-                />
-                <p>Convention Center</p>
-              </div>
-              <div class="card__progress">
-                <div class="card__progress--text">
-                  <p>Progress</p>
-                  <p>45%</p>
-                </div>
-                <div class="progress">
-                  <div class="progress__bar"></div>
-                </div>
-              </div>
-              <div class="card__summary">
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/vendorss.svg"
-                    alt="vendor.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Vendors</p>
-                    <p>6</p>
-                  </div>
-                </div>
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/taskss.svg"
-                    alt="task.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Tasks</p>
-                    <p>18/35</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event__card">
-            <div class="event__card--heading"></div>
-            <div class="event__card--body">
-              <div class="title__cont">
-                <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--active">Active</div>
-              </div>
-              <div class="card__date">
-                <img src="./images/planner-images/Events.svg" alt="event.png" />
-                <p>Nov 22, 2025</p>
-              </div>
-              <div class="card__time">
-                <img src="./images/planner-images/time.svg" alt="event.png" />
-                <p>12:00 PM</p>
-              </div>
-              <div class="card__venue">
-                <img
-                  src="./images/planner-images/location.svg"
-                  alt="event.png"
-                />
-                <p>Convention Center</p>
-              </div>
-              <div class="card__progress">
-                <div class="card__progress--text">
-                  <p>Progress</p>
-                  <p>45%</p>
-                </div>
-                <div class="progress">
-                  <div class="progress__bar"></div>
-                </div>
-              </div>
-              <div class="card__summary">
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/vendorss.svg"
-                    alt="vendor.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Vendors</p>
-                    <p>6</p>
-                  </div>
-                </div>
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/taskss.svg"
-                    alt="task.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Tasks</p>
-                    <p>18/35</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event__card">
-            <div class="event__card--heading"></div>
-            <div class="event__card--body">
-              <div class="title__cont">
-                <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--active">Active</div>
-              </div>
-              <div class="card__date">
-                <img src="./images/planner-images/Events.svg" alt="event.png" />
-                <p>Nov 22, 2025</p>
-              </div>
-              <div class="card__time">
-                <img src="./images/planner-images/time.svg" alt="event.png" />
-                <p>12:00 PM</p>
-              </div>
-              <div class="card__venue">
-                <img
-                  src="./images/planner-images/location.svg"
-                  alt="event.png"
-                />
-                <p>Convention Center</p>
-              </div>
-              <div class="card__progress">
-                <div class="card__progress--text">
-                  <p>Progress</p>
-                  <p>45%</p>
-                </div>
-                <div class="progress">
-                  <div class="progress__bar"></div>
-                </div>
-              </div>
-              <div class="card__summary">
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/vendorss.svg"
-                    alt="vendor.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Vendors</p>
-                    <p>6</p>
-                  </div>
-                </div>
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/taskss.svg"
-                    alt="task.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Tasks</p>
-                    <p>18/35</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event__card">
-            <div class="event__card--heading"></div>
-            <div class="event__card--body">
-              <div class="title__cont">
-                <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--completed">
-                  Completed
-                </div>
-              </div>
-              <div class="card__date">
-                <img src="./images/planner-images/Events.svg" alt="event.png" />
-                <p>Nov 22, 2025</p>
-              </div>
-              <div class="card__time">
-                <img src="./images/planner-images/time.svg" alt="event.png" />
-                <p>12:00 PM</p>
-              </div>
-              <div class="card__venue">
-                <img
-                  src="./images/planner-images/location.svg"
-                  alt="event.png"
-                />
-                <p>Convention Center</p>
-              </div>
-              <div class="card__progress">
-                <div class="card__progress--text">
-                  <p>Progress</p>
-                  <p>45%</p>
-                </div>
-                <div class="progress">
-                  <div class="progress__bar"></div>
-                </div>
-              </div>
-              <div class="card__summary">
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/vendorss.svg"
-                    alt="vendor.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Vendors</p>
-                    <p>6</p>
-                  </div>
-                </div>
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/taskss.svg"
-                    alt="task.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Tasks</p>
-                    <p>18/35</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event__card">
-            <div class="event__card--heading"></div>
-            <div class="event__card--body">
-              <div class="title__cont">
-                <h3 class="card__title">Baby Shower - William's</h3>
-                <div class="event__status event__status--upcoming">
-                  Upcoming
-                </div>
-              </div>
-              <div class="card__date">
-                <img src="./images/planner-images/Events.svg" alt="event.png" />
-                <p>Nov 22, 2025</p>
-              </div>
-              <div class="card__time">
-                <img src="./images/planner-images/time.svg" alt="event.png" />
-                <p>12:00 PM</p>
-              </div>
-              <div class="card__venue">
-                <img
-                  src="./images/planner-images/location.svg"
-                  alt="event.png"
-                />
-                <p>Convention Center</p>
-              </div>
-              <div class="card__progress">
-                <div class="card__progress--text">
-                  <p>Progress</p>
-                  <p>45%</p>
-                </div>
-                <div class="progress">
-                  <div class="progress__bar"></div>
-                </div>
-              </div>
-              <div class="card__summary">
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/vendorss.svg"
-                    alt="vendor.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Vendors</p>
-                    <p>6</p>
-                  </div>
-                </div>
-                <div class="card__vendors">
-                  <img
-                    src="./images/planner-images/taskss.svg"
-                    alt="task.png"
-                  />
-                  <div class="card__vendors--text">
-                    <p>Tasks</p>
-                    <p>18/35</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </template>
         </div>
       </section>
     </main>
@@ -645,38 +203,38 @@
     <section class="modal">
       <div class="modal__heading">
         <h2>Create New Event</h2>
-        <img src="./images/planner-images/mi_close.svg" alt="close.btn" />
+        <img src="./images/planner-images/mi_close.svg" alt="close.btn"/>
       </div>
       <form action="" class="modal__form">
         <div class="modal__input">
           <label for="event__name">Event Name <span>*</span></label>
-          <input id="event__name" type="text" placeholder="Sarah Johnson" />
+          <input id="event__name" type="text" placeholder="Sarah Johnson" required />
         </div>
         <div class="modal__input">
           <label for="event__type">Event Type <span>*</span></label>
-          <input id="event__type" type="text" placeholder="Sarah Johnson" />
+          <input id="event__type" type="text" placeholder="Sarah Johnson" required/>
         </div>
         <div class="modal__datetime">
           <div class="modal__input">
             <label for="date">Date <span>*</span></label>
-            <input id="date" type="date" placeholder="Sarah Johnson" />
+            <input id="date" type="date" placeholder="Sarah Johnson" required />
           </div>
           <div class="modal__input">
             <label for="time">Time <span>*</span></label>
-            <input id="time" type="time" placeholder="Sarah Johnson" />
+            <input id="time" type="time" placeholder="Sarah Johnson" required/>
           </div>
         </div>
         <div class="modal__input">
           <label for="location">Location <span>*</span></label>
-          <input id="location" type="text" placeholder="Sarah Johnson" />
+          <input id="location" type="text" placeholder="Sarah Johnson" required/>
         </div>
         <div class="modal__input">
           <label for="guests">Number of guests <span>*</span></label>
-          <input id="guests" type="text" placeholder="Sarah Johnson" />
+          <input id="guests" type="text" placeholder="Sarah Johnson" required/>
         </div>
         <div class="modal__input modal__input--textarea">
           <label for="bio">Bio</label>
-          <textarea id="bio"></textarea>
+          <textarea id="bio" required></textarea>
         </div>
         <div class="modal__buttons">
           <button class="modal__button modal__button--cancel">Cancel</button>
@@ -691,7 +249,7 @@
     </section>
 
     <!-- Overlay -->
-     <div class="overlay"><h1>SHOW</h1></div>
+    <div class="overlay"><h1>SHOW</h1></div>
 
     <script src="planner-events.js"></script>
   </body>
