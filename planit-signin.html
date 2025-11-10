@@ -19,12 +19,10 @@
     <title>PlanIt - Event Management</title>
 
     <link rel="stylesheet" href="planit.css" />
-
-    <!-- Javascript link -->
-    <script src="planit-sign.js" defer></script>
   </head>
 
   <body>
+    <div class="errors"></div>
     <!-- HEADER: Back button (shows on mobile only) -->
     <header class="header">
       <span class="card-icon-wrapper">
@@ -97,7 +95,7 @@
             <a class="forgot__password" href="forgot-password.html">Forgot Password?</a>
 
             <!-- SUBMIT BUTTON -->
-            <button type="submit" class="submit-btn">Sign In</button>
+            <button type="button" class="submit-btn sign-in">Sign In</button>
 
             <!-- ALTERNATIVE SIGN-IN OPTIONS -->
             <div class="other-means">
@@ -164,5 +162,6 @@
         }
       }
     </script>
+    <script src="sign-in.js"></script>
   </body>
 </html>

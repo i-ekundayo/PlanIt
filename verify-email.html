@@ -21,9 +21,7 @@
 
       <div class="form-box" id="form-box">
         <h2>Verify Code</h2>
-        <p class="link">
-          Please enter the code sent to your email address plaint@email.com
-        </p>
+        <p class="link">Please enter the code sent to your email address</p>
 
         <div class="code-container">
           <input class="code-input" type="number" maxlength="1" required />
@@ -77,6 +75,8 @@
       // Success Message Display
       const successDisplay = (message, success = "success") => {
         const newDiv = document.createElement("div");
+        console.log(message);
+
         success === "success"
           ? newDiv.classList.add("success")
           : newDiv.classList.add("error");
@@ -89,6 +89,7 @@
 
       if (message) {
         successDisplay(message);
+        sessionStorage.removeItem("message");
       }
 
       // Checking Number of errors
@@ -109,6 +110,7 @@
       // POST REQUEST TO VERIFY EMAIL
       const verifyEmail = async () => {
         const otp = verifyCode();
+        if (!otp) return;
         try {
           const response = await fetch(
             "https://planit-production-e550.up.railway.app/api/auth/verify-email",
@@ -132,6 +134,9 @@
           }
           console.log(data);
 
+          sessionStorage.setItem("message", data.message);
+          localStorage.setItem("token", data.data.accessToken);
+          localStorage.setItem("role", data.data.user.role);
           role === "planner"
             ? window.location.replace("planner-profile.html")
             : window.location.replace("vendor-profile.html");
@@ -149,7 +154,7 @@
       const resendCode = async () => {
         try {
           const response = await fetch(
-            "https://planit-production-e550.up.railway.app/api/auth/verify-email",
+            "https://planit-production-e550.up.railway.app/api/auth/resend-otp",
             {
               method: "POST",
               headers: {
@@ -164,13 +169,31 @@
           const data = await response.json();
 
           if (!response.ok) {
+            if (data.message.includes("Email is already verified")) {
+              successDisplay("Redirecting...");
+              setTimeout(() => {
+                role === "planner"
+                  ? window.location.replace("planner-profile.html")
+                  : window.location.replace("vendor-profile.html");
+              }, 2000);
+              return;
+            }
+
             throw data.errors || data.message;
           }
           console.log(data);
+          sessionStorage.setItem("message", data.message);
 
-          role === "planner"
-            ? window.location.replace("planner-profile.html")
-            : window.location.replace("vendor-profile.html");
+          if (data.message.includes("Email is already verified")) {
+            // setTimeout(() => {
+            successDisplay("Redirecting...");
+            role === "planner"
+              ? window.location.replace("planner-profile.html")
+              : window.location.replace("vendor-profile.html");
+            // }, 3000);
+          }
+
+          window.location.replace("verify-email.html");
         } catch (error) {
           errorCheck(error);
         }

@@ -33,6 +33,12 @@ body {
   color: white;
 }
 
+.success {
+  padding: 10px;
+  background: red;
+  color: white;
+}
+
 /*HEADER SECTION*/
 .header {
   display: none; /* Hidden on desktop, shows on mobile */
