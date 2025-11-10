@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanIt - Customer Reviews</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Phosporus Icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    
+    <!-- Material Icons for Navigation -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="planit-reviews.css">
+</head>
+<body>
+    <!--  SIDEBAR - Navigation Menu -->
+    <aside class="sidebar">
+        <!-- Logo -->
+        <div class="sidebar-logo">
+            <img src="Group.png" alt="">
+            <h1 class="sidebar-logo-text">PlanIt</h1>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="sidebar-nav">
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-house"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="sidebar-link active">
+                <i class="ph ph-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-check-square"></i>
+                <span>Tasks</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-star"></i>
+                <span>Reviews</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-chat-circle-dots"></i>
+                <span>Messages</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-gear"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="sidebar-profile">
+            <div class="sidebar-avatar">JD</div>
+            <div class="sidebar-user-info">
+                <div class="sidebar-user-name">James Davis</div>
+                <div class="sidebar-user-email">james@planit.com</div>
+            </div>
+        </div>
+    </aside>
+
+    <!--  MAIN CONTENT - Reviews Page -->
+    <main class="main">
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1 class="page-headertitle">Customer Reviews</h1>
+            <p class="page-header-subtitle">See feedback from planners who use your service offerings</p>
+        </header>
+
+        <!-- Search Bar -->
+        <section class="search-section">
+            <div class="search-bar">
+                <span class="material-icons search-bar-icon">search</span>
+                <input type="text" class="search-bar-input" placeholder="Search reviews...">
+            </div>
+        </section>
+
+        <!-- Rating Summary -->
+        <section class="rating-summary">
+            <!-- Overall Rating Card -->
+            <div class="summary-card">
+                <div class="summary-card-value">4.7</div>
+                <div class="summary-card-stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <div class="summary-card-label">Overall Rating</div>
+            </div>
+
+            <!-- Total Reviews Card -->
+            <div class="summary-card">
+                <div class="summary-card-value">6</div>
+                <div class="summary-card-label">Total Reviews</div>
+            </div>
+        </section>
+
+        <!-- Reviews List -->
+        <section class="reviews-container">
+            <!-- Review Card 1 -->
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="review-user">
+                        <div class="review-user-avatar">SJ</div>
+                        <div class="review-user-info">
+                            <div class="review-user-name">Sarah Johnson</div>
+                            <div class="review-user-event">Baby Shower</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="review-date">Nov 5, 2025</div>
+                    </div>
+                </div>
+                <p class="review-content">
+                    The food was absolutely everything! It was fresh, tasty and it looked delicious. Very professional team; highly recommend!
+                </p>
+                <div class="review-response">
+                    <div class="review-response-label">Outstanding!!!</div>
+                    <p class="review-response-text">
+                        Thank you so much for your kind words! We're thrilled that you and your guests enjoyed the food. It was our pleasure to be part of your special day!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="review-user">
+                        <div class="review-user-avatar">KA</div>
+                        <div class="review-user-info">
+                            <div class="review-user-name">Kemi Adekoya</div>
+                            <div class="review-user-event">Wedding Reception</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="review-date">Oct 28, 2025</div>
+                    </div>
+                </div>
+                <p class="review-content">
+                    Great food and service overall. The food was really outstanding. Only minor issue was a slight delay in the first course, but they quickly made up for it. I highly recommend for events of all kinds.
+                </p>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="review-user">
+                        <div class="review-user-avatar">LO</div>
+                        <div class="review-user-info">
+                            <div class="review-user-name">Lola Okoro</div>
+                            <div class="review-user-event">Birthday Celebration</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                        </div>
+                        <div class="review-date">Oct 20, 2025</div>
+                    </div>
+                </div>
+                <p class="review-content">
+                    Good food and presentation. The flavours were top notch. We really enjoyed working with the team. Will definitely use again for future events!
+                </p>
+            </div>
+
+            <!-- Review Card 4 -->
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="review-user">
+                        <div class="review-user-avatar">FA</div>
+                        <div class="review-user-info">
+                            <div class="review-user-name">Femi Adio</div>
+                            <div class="review-user-event">Corporate Event</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="review-date">Oct 15, 2025</div>
+                    </div>
+                </div>
+                <p class="review-content">
+                    Absolutely exceptional service! The food was delicious and beautifully presented. Every guest commented on the outstanding catering. Highly professional team. Will definitely use their services again!
+                </p>
+            </div>
+
+            <!-- Review Card 5 -->
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="review-user">
+                        <div class="review-user-avatar">MJ</div>
+                        <div class="review-user-info">
+                            <div class="review-user-name">Maryam Johnson</div>
+                            <div class="review-user-event">Anniversary Celebration</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="review-date">Oct 8, 2025</div>
+                    </div>
+                </div>
+                <p class="review-content">
+                    Very good service and food was delicious. The catering team was fast. Food presentation was beautiful though portions were a little light on some dishes. Will definitely be using again for future events!
+                </p>
+            </div>
+
+            <!-- Review Card 6 -->
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="review-user">
+                        <div class="review-user-avatar">CE</div>
+                        <div class="review-user-info">
+                            <div class="review-user-name">Chinwe Ekezie</div>
+                            <div class="review-user-event">Fundraising Gala</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="review-date">Sep 30, 2025</div>
+                    </div>
+                </div>
+                <p class="review-content">
+                    Outstanding!! The caterers did an amazing job! Guests kept asking who catered the event. Food was fresh and tasty. The presentation was gorgeous. Definitely using them again for next year's event!
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

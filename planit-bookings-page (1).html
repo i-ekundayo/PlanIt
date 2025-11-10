@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanIt - Bookings</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Phosporus Icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    
+    <!-- Material Icons for Navigation -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="planit-bookings.css">
+</head>
+<body>
+    <!--SIDEBAR - Navigation Menu-->
+    <aside class="sidebar">
+        <!-- Logo -->
+        <div class="sidebar-logo">
+            <!-- <div class="sidebar-logo-icon"> -->
+                <img src="Group.png" alt="">
+            <!-- </div> -->
+            <h1 class="sidebar-logo-text">PlanIt</h1>
+        </div>
+
+        <!-- Navigation Links -->
+        <!-- <nav class="sidebar-nav" class="sidebar-link">
+                <i class="ph ph-house">                
+                    <span>Dashboard</span>
+                </i>
+            </a>
+            <a href="#" class="sidebar-link active">
+                 <span class="material-icons">event</span> -->
+                <!-- <span>Bookings</span>
+            </a>
+            <a href="#" class="sidebar-link"> -->
+                <!-- <span class="material-icons">check_box</span> -->
+                <!-- <span>Tasks</span>
+            </a>
+            <a href="#" class="sidebar-link"> -->
+                <!-- <span class="material-icons">star</span> -->
+                <!-- <span>Reviews</span>
+            </a>
+            <a href="#" class="sidebar-link"> -->
+                <!-- <span class="material-icons">chat_bubble</span> -->
+                <!-- <span>Messages</span>
+            </a>
+            <a href="#" class="sidebar-link"> -->
+                <!-- <span class="material-icons">settings</span> -->
+                <!-- <span>Settings</span>
+            </a>
+        </nav> -->
+        <nav class="sidebar-nav">
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-house"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="sidebar-link active">
+                <i class="ph ph-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-check-square"></i>
+                <span>Tasks</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-star"></i>
+                <span>Reviews</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-chat-circle-dots"></i>
+                <span>Messages</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="ph ph-gear"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="sidebar-profile">
+            <div class="sidebar-avatar">JD</div>
+            <div class="sidebar-user-info">
+                <div class="sidebar-user-name">James Davis</div>
+                <div class="sidebar-user-email">james@planit.com</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT - Bookings Page -->
+    <main class="main">
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1 class="page-header-title">Booking Request</h1>
+            <p class="page-header-subtitle">View all your booking requests from users</p>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active">All</div>
+            <div class="tab">Pending</div>
+            <div class="tab">Confirmed</div>
+            <div class="tab">Completed</div>
+        </div>
+
+        <!-- Filters -->
+        <!-- <div class="filters">
+            <div class="filter-group">
+                <label class="filter-label">Search</label>
+                <input type="text" class="filter-input" placeholder="Search bookings...">
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">Date</label>
+                <input type="date" class="filter-input">
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">Status</label>
+                <select class="filter-select">
+                    <option>All Status</option>
+                    <option>Pending</option>
+                    <option>Confirmed</option>
+                    <option>Completed</option>
+                </select>
+            </div>
+        </div> -->
+
+        <!-- Bookings Grid -->
+        <div class="bookings-grid">
+            <!-- Booking Card 1 - Baby Shower (Image 6: Baby Shower sign) -->
+            <div class="booking-card">
+                <div class="booking-card-image" 
+                style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),;
+                background-image:url(./EventCard.png);  background-size: cover; background-position: center;">
+                    <!-- <img src="EventCard.png" alt="A baby shower venue" srcset="">-->
+                    </div> 
+                <div class="booking-card-content">
+                    <div class="booking-card-header">
+                        <h3 class="booking-card-title">Baby Shower - William's</h3>
+                        <span class="status-badge status-badge-pending">Pending</span>
+                    </div>
+                    
+                    <div class="booking-card-details">
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">event</span>
+                            <span>Nov 10, 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">access_time</span>
+                            <span>2:00 PM</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">location_on</span>
+                            <span>Eko Signature Suite</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-card-footer">
+                        <div class="planner-info">
+                            <span class="planner-info-label">Planner:</span>
+                            <span class="planner-info-name">Sarah Johnson</span>
+                        </div>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Card 2 - Wedding Reception (Image 5: Elegant wedding venue) -->
+            <div class="booking-card">
+                <div class="booking-card-image" 
+                style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),;
+                background-image:url(./EventCard\ \(1\).png);  background-size: cover; background-position: center;">
+                </div>
+                <div class="booking-card-content">
+                    <div class="booking-card-header">
+                        <h3 class="booking-card-title">Wedding Reception - Bola & Tomiwa</h3>
+                        <span class="status-badge status-badge-confirmed">Confirmed</span>
+                    </div>
+                    
+                    <div class="booking-card-details">
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">event</span>
+                            <span>Dec 5, 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">access_time</span>
+                            <span>4:00 PM</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">location_on</span>
+                            <span>Landmark Event Centre</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-card-footer">
+                        <div class="planner-info">
+                            <span class="planner-info-label">Planner:</span>
+                            <span class="planner-info-name">Kemi Makinde</span>
+                        </div>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Card 3 - Graduation Dinner (Image 4: Elegant wedding venue duplicate) -->
+            <div class="booking-card">
+                <div class="booking-card-image"
+                style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),;
+                background-image:url(./EventCard\ \(1\).png);  background-size: cover; background-position: center;">
+                </div>
+                <div class="booking-card-content">
+                    <div class="booking-card-header">
+                        <h3 class="booking-card-title">Graduation Dinner - The Okonkwo's</h3>
+                        <span class="status-badge status-badge-pending">Pending</span>
+                    </div>
+                    
+                    <div class="booking-card-details">
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">event</span>
+                            <span>Nov 22, 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">access_time</span>
+                            <span>7:00 PM</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">location_on</span>
+                            <span>Radisson Blu Hotel, Ikeja</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-card-footer">
+                        <div class="planner-info">
+                            <span class="planner-info-label">Planner:</span>
+                            <span class="planner-info-name">Efe Okoli</span>
+                        </div>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Card 4 - Church Anniversary (Image 3: Conference/seminar venue) -->
+            <div class="booking-card">
+                <div class="booking-card-image" 
+                style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),;
+                background-image:url(./EventCard\ \(3\).png);  background-size: cover; background-position: center;">
+                </div>
+                <div class="booking-card-content">
+                    <div class="booking-card-header">
+                        <h3 class="booking-card-title">Church Anniversary - RCCG Glory Chapel</h3>
+                        <span class="status-badge status-badge-confirmed">Confirmed</span>
+                    </div>
+                    
+                    <div class="booking-card-details">
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">event</span>
+                            <span>Nov 30, 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">access_time</span>
+                            <span>11:00 AM</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">location_on</span>
+                            <span>RCCG Glory Chapel</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-card-footer">
+                        <div class="planner-info">
+                            <span class="planner-info-label">Planner:</span>
+                            <span class="planner-info-name">Maureen Reyi</span>
+                        </div>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Card 5 - Barristers Annual Gala (Image 2: Conference/seminar venue duplicate) -->
+            <div class="booking-card">
+                <div class="booking-card-image" 
+                    style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),;
+                    background-image:url(./EventCard\ \(3\).png);  background-size: cover; background-position: center;">
+                </div>
+                <div class="booking-card-content">
+                    <div class="booking-card-header">
+                        <h3 class="booking-card-title">Barristers Annual Gala</h3>
+                        <span class="status-badge status-badge-pending">Pending</span>
+                    </div>
+                    
+                    <div class="booking-card-details">
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">event</span>
+                            <span>Nov 27, 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">access_time</span>
+                            <span>8:00 PM</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">location_on</span>
+                            <span>Convention Centre</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-card-footer">
+                        <div class="planner-info">
+                            <span class="planner-info-label">Planner:</span>
+                            <span class="planner-info-name">Lola Dada</span>
+                        </div>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Card 6 - Corporate Party (Image 1: Corporate event with people holding glasses) -->
+            <div class="booking-card">
+                <div class="booking-card-image" 
+                    style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),;
+                    background-image:url(./EventCard\ \(5\).png);  background-size: cover; background-position: center;">
+                </div>
+                <div class="booking-card-content">
+                    <div class="booking-card-header">
+                        <h3 class="booking-card-title">Corporate Party - Zenith Bank</h3>
+                        <span class="status-badge status-badge-completed">Completed</span>
+                    </div>
+                    
+                    <div class="booking-card-details">
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">event</span>
+                            <span>Oct 15, 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">access_time</span>
+                            <span>6:00 PM</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons detail-item-icon">location_on</span>
+                            <span>Eko Hotel & Suites, VI</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-card-footer">
+                        <div class="planner-info">
+                            <span class="planner-info-label">Planner:</span>
+                            <span class="planner-info-name">Adeolu Babs</span>
+                        </div>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

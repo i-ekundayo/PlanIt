@@ -1,0 +1,418 @@
+/*  PLANIT BOOKINGS PAGE - CSS STYLESHEET */
+
+/*  RESET & BASIC SETUP */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables - Store colors we'll use repeatedly */
+:root {
+    --primary-blue: #1B2CC1;
+    --light-blue: #E8EBFD;
+    --dark-gray: #2D3142;
+    --medium-gray: #6B7280;
+    --light-gray: #F3F4F6;
+    --white: #FFFFFF;
+    --border-color: #E5E7EB;
+    --success-green: #10B981;
+    --warning-yellow: #F59E0B;
+    --info-blue: #3B82F6;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-gray);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove bullet points from lists */
+li {
+    list-style: none;
+}
+
+/*  SIDEBAR NAVIGATION */
+.sidebar {
+    width: 280px;
+    background-color: var(--white);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-right: 1px solid var(--border-color);
+}
+
+/* Logo Section */
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--primary-blue);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sidebar-logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+/* Navigation Menu */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-link {
+    display:inline-flex flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: var(--medium-gray);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sidebar-link:hover {
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+}
+
+.sidebar-link.active {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.sidebar-link-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Material Icons styling */
+.material-icons {
+    font-size: 20px;
+}
+
+/* User Profile at Bottom */
+.sidebar-profile {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.sidebar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.sidebar-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-user-name {
+    font-weight: 600;
+    color: var(--dark-gray);
+    font-size: 14px;
+}
+
+.sidebar-user-email {
+    font-size: 12px;
+    color: var(--medium-gray);
+}
+
+/*  MAIN CONTENT AREA */
+.main {
+    flex: 1;
+    padding: 32px;
+    overflow-y: auto;
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: 32px;
+}
+
+.page-header-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+}
+
+.page-header-subtitle {
+    color: var(--medium-gray);
+    font-size: 16px;
+}
+
+/* Tabs Navigation */
+.tabs {
+    display: flex;
+    gap: 32px;
+    /* border-bottom: 2px solid var(--border-color); */
+    margin-bottom: 32px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #E8E8E8;
+}
+
+.tab {
+    padding: 12px 4px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    color: var(--primary-blue);
+}
+
+.tab.active {
+    color: var(--primary-blue);
+    /* border-bottom-color: var(--primary-blue); */
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 10px 70px 10px 70px;
+    border-radius: 20px;
+}
+
+/* Filter Section */
+/* .filters {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 200px;
+}
+
+.filter-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+.filter-select,
+.filter-input {
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.filter-select:focus,
+.filter-input:focus {
+    border-color: var(--primary-blue);
+} */
+
+/* Booking Cards Grid */
+.bookings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* Individual Booking Card */
+.booking-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image */
+.booking-card-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--light-blue);
+}
+
+/* Card Content */
+.booking-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Card Header (Title + Status Badge) */
+.booking-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.booking-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-badge-confirmed {
+    background-color: #D1FAE5;
+    color: var(--success-green);
+}
+
+.status-badge-pending {
+    background-color: #FEF3C7;
+    color: var(--warning-yellow);
+}
+
+.status-badge-completed {
+    background-color: #DBEAFE;
+    color: var(--info-blue);
+}
+
+/* Card Details (Date, Time, Location) */
+.booking-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--medium-gray);
+    font-size: 14px;
+}
+
+.detail-item-icon {
+    font-size: 18px;
+}
+
+/* Card Footer (Planner Info + Button) */
+.booking-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.planner-info {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.planner-info-label {
+    color: var(--medium-gray);
+}
+
+.planner-info-name {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+/* View Details Button */
+.btn-view {
+    padding: 8px 16px;
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .bookings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+}
