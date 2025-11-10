@@ -33,11 +33,25 @@ const errorDisplay = (message) => {
   errors.appendChild(newDiv);
 };
 
+// Success Message Display
+const successDisplay = (message) => {
+  const newDiv = document.createElement("div");
+  newDiv.classList.add("error");
+  newDiv.style.background = 'green';
+  newDiv.textContent = message;
+  errors.appendChild(newDiv);
+};
+
+
 // Checking Number of errors
-const errorCheck = (errorMessages) => {
-  errorMessages.forEach((error) => {
-    errorDisplay(error.message);
-  });
+const errorCheck = (error) => {
+  if (Array.isArray(error)) {
+    error.forEach((err) => {
+      errorDisplay(err.message);
+    });
+  } else {
+    errorDisplay(error)
+  }
   setTimeout(() => {
     errors.innerHTML = "";
   }, 5000);
@@ -63,30 +77,22 @@ const signUp = async () => {
         }),
       }
     );
-    
 
     if (!response.ok) {
-      const errorData = await response.json();
-      console.log(errorData);
-
-      throw new Error(errorData.message);
+      const data = await response.json();
+      
+      throw data.errors || data.message;
     }
 
-    // const data = await response.json();
-    // const errors = data.error;
-
-    // const errorMessages = errors.map((error) => error.message);
-    // console.log(errorMessages);
+    const data = await response.json();
     
+    successDisplay(data.message);
 
-    // if (errorMessages !== "") {
-    //   // errorCheck(errorMessages);
-    // } else {
-    //   console.log(data);
-    //   window.location.replace("verify-email.html");
-    // }
+   
+    window.location.replace("verify-email.html");
+    
   } catch (error) {
-    errorCheck(error.message);
+    errorCheck(error);
   }
 };
 
