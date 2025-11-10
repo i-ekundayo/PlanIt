@@ -14,12 +14,36 @@ body {
   --border-color-blue: #767cf5;
 }
 
+.message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.success {
+  padding: 10px;
+  background: green;
+  color: white;
+}
+
+.error {
+  padding: 10px;
+  background: green;
+  color: white;
+}
+
 main {
   display: flex;
   height: 100vh;
   gap: 40px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 0px 50px;
 }
 

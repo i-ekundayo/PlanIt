@@ -24,6 +24,7 @@ const signUpBtn = document.querySelector(".sign-up");
 const fullName = document.getElementById("fnm");
 const email = document.getElementById("em");
 const password = document.getElementById("ps");
+const newPassword = document.getElementById("cps")
 const role = document.getElementById("role")
 
 // Displaying Error
@@ -37,8 +38,7 @@ const errorDisplay = (message) => {
 // Success Message Display
 const successDisplay = (message) => {
   const newDiv = document.createElement("div");
-  newDiv.classList.add("error");
-  newDiv.style.background = "green";
+  newDiv.classList.add("success");
   newDiv.textContent = message;
   errors.appendChild(newDiv);
 };
@@ -60,6 +60,10 @@ const errorCheck = (error) => {
 // Creating a POST request for Signup
 const errors = document.querySelector(".errors");
 const signUp = async () => {
+  if(password.value !== newPassword.value) {
+    errorCheck('Passwords does not match')
+    return;
+  }
   try {
     const response = await fetch(
       "https://planit-production-e550.up.railway.app/api/auth/signup",
