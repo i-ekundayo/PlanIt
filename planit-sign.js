@@ -24,6 +24,7 @@ const signUpBtn = document.querySelector(".sign-up");
 const fullName = document.getElementById("fnm");
 const email = document.getElementById("em");
 const password = document.getElementById("ps");
+const role = document.getElementById("role")
 
 // Displaying Error
 const errorDisplay = (message) => {
@@ -71,23 +72,25 @@ const signUp = async () => {
           email: email.value,
           password: password.value,
           fullName: fullName.value,
-          role: "planner",
+          role: role.value,
           phoneNumber: "",
         }),
       }
     );
 
+    const data = await response.json();
+
     if (!response.ok) {
-      const data = await response.json();
+      
 
       throw data.errors || data.message;
     }
 
-    const data = await response.json();
     console.log(data);
 
     sessionStorage.setItem("message", data.message);
     localStorage.setItem("userId", data.data.userId);
+    localStorage.setItem("role", role.value);
 
     window.location.replace("verify-email.html");
   } catch (error) {
